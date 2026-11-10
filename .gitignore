@@ -32,3 +32,6 @@ test.js
 
 /storage/app/*.json
 storage/app/*.json
+*.md
+*.xlsx
+*.docx
