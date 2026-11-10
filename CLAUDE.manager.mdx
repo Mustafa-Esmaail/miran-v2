@@ -1,0 +1,132 @@
+# CLAUDE.manager.md — Miran (Manager / Design Copy)
+
+## Who you are working with
+
+The person using this copy is a **manager, not a programmer**. He uses Claude to change **how the site and the admin panel look** (design, colors, text, layout, images) and to create new pages.
+
+- Talk in plain, simple language. No technical jargon. Short steps.
+- Before you change anything, say in one or two sentences what you will change and which page it affects.
+- After a change, tell him exactly where to look to see it (which page / which section).
+- If he asks for something unclear, ask one simple question with options.
+
+## What he is allowed to do freely (design work)
+
+- Colors, fonts, spacing, sizes, borders, shadows, icons, images.
+- Text and wording on pages (Arabic and English copy).
+- Layout of sections on pages: move, show/hide, restyle.
+- Files mainly in:
+  - `resources/views/**` (Blade pages and components) — **design/markup only**
+  - `resources/css/**` (`app.css`, `landing-v2.css`, `landing-course.css`, `filament/`)
+  - `public/images/**`, static HTML mockups in the project root (`landing-v2.html`, `landingv3.html`, `bootcamp.html`, …)
+
+Even in these files: **do not touch** `wire:model`, `wire:click`, `wire:submit`, form `name=""` attributes, `@csrf`, `route(...)` names, `@livewire`/`<livewire:...>` tags, or `x-data` logic. Change the look around them, never the logic inside them.
+
+## Admin panel (Filament): design, layout and new pages are allowed
+
+He may change how the admin panel looks and is laid out, and create new pages. He may **not** change how it works: what it saves, who can see it, or what happens when someone clicks.
+
+### Allowed in Filament
+- **Admin theme:** `resources/css/filament/admin/theme.css`, plus the Blade views in `resources/views/filament/**` (pages, widgets, components such as the topbar and sidebar).
+- **Panel branding** in `app/Providers/Filament/AdminPanelProvider.php`: **only** `->colors([...])`, `->font(...)`, `->brandLogo(...)`, `->brandLogoHeight(...)`, `->favicon(...)`. Nothing else in that file.
+- **Resource layout** in `app/Filament/Admin/Resources/**` (form schemas, tables, infolists):
+  - grouping and arranging: `Section`, `Grid`, `Fieldset`, `Tabs`, `->columns()`, `->columnSpan()`, the order fields appear in
+  - wording and visuals: `->label()`, `->placeholder()`, `->helperText()`, `->hint()`, `->icon()`, `->color()`, `->badge()`, `->description()`, `->heading()`
+  - table display: column order, labels, `->toggleable()`, `->wrap()`, `->alignment()`, date or money *display* format
+  - navigation: `$navigationIcon`, `$navigationSort`, `getNavigationLabel()`, `getNavigationGroup()`
+- **New admin pages** (dashboards, report or info views) — see "Creating pages" below.
+
+### Not allowed in Filament (major update, so ask the developer)
+- The field key in `make('...')`. That key is the database column, so renaming or removing it loses data.
+- `->required()`, `->rules()`, `->unique()`, `->maxLength()`, other validation rules, and `->default()` values
+- `->relationship()`, `->options()` taken from the database, `getEloquentQuery()`, `modifyQueryUsing()`, filters' query logic
+- Action logic: `->action(fn ...)`, `->using()`, `mutateFormDataBefore*`, `afterCreate`, `afterSave`, `handleRecordCreation`, bulk or delete actions
+- Access: `canAccess`, `canView`, `canEdit`, `canCreate`, `canDelete`, `->visible()` / `->hidden()` when they check roles or permissions, policies, shield/roles/permissions
+- **Money and security resources:** Orders, Payments, Invoices, Coupons, CourseDiscounts, BankTransferReceipts, Enrollments, CommissionLedgers, Users, Students, Customers, Roles, Permissions, ApiClients, plus the `Settings`, `PaymentMethods` and `Integrations` pages. In these, **only table display changes** (labels, column order, colors) are allowed. Forms, actions and anything else go to the developer.
+
+## Creating pages
+
+### A) New public website page (preferred, no code)
+Site pages are built in the admin panel: **Admin → Pages → New**, then add **Sections** (hero, cta, faq, image_text, …). Guide him through it step by step in the admin panel first. Most new pages need no code at all.
+
+- **Restyling an existing section:** edit its Blade file in `resources/views/sections/*.blade.php`. This is allowed, but if a section is used on many pages, warn him that the change shows everywhere.
+- **New section design:** allowed. Add `resources/views/sections/<new_name>.blade.php` and register it in the section type dropdown, copying the exact pattern of an existing type in **both** `app/Filament/Admin/Resources/Sections/Schemas/SectionForm.php` and `app/Filament/Admin/Resources/Page/RelationManagers/SectionsRelationManager.php` (the option, a label in the language files, and content fields built the same way as an existing type's fields). If the section needs a new database column, a new model, a form that saves data, or a new page template in `Page::LANDABLE_TEMPLATES`, it is a **major update**.
+- **Adding a new URL in `routes/web.php`:** a **major update**. Use a CMS page with a slug instead.
+
+### B) New admin page (Filament custom page)
+Allowed when the page **only shows** things: a dashboard, a report view, help or info content.
+- Create it with `php artisan make:filament-page <Name> --no-interaction`, or copy a simple existing page in `app/Filament/Pages/`. Put its view in `resources/views/filament/pages/`.
+- Copy `canAccess()` from a similar existing page so the same roles can see it. **Never** make a page open to everyone without asking.
+- Read-only: the page may display data from existing models, but no forms that save, no actions that create, edit or delete, and no changes to models or services. Anything that writes data is a **major update**.
+
+After any Filament change, open the admin page in the browser and confirm it loads with no error. A broken admin page blocks the whole team.
+
+## 🚨 MAJOR UPDATES — STOP AND ASK THE DEVELOPER FIRST
+
+If a request touches **any** of the areas below, **do not make the change**. Stop and show the warning message in the next section.
+
+### 1. Core / system code
+- Anything in `app/` (Models, Services, Livewire PHP classes, Controllers, Policies, Jobs, Observers, Enums, …). **Exception:** the Filament design, layout and page work allowed above.
+- `routes/`, `config/`, `bootstrap/`, `database/`, `tests/`
+- `.env` or any settings / keys / passwords
+- `composer.json`, `package.json`, installing or removing any package
+- Admin panel (Filament) behavior: saving, validation, actions, queries, roles, permissions
+
+### 2. Database / migrations
+- Creating, editing, or running migrations (`php artisan migrate`, `migrate:fresh`, `db:seed`, …)
+- Adding/removing/renaming any table or column
+- Deleting or editing data directly in the database
+
+### 3. Lead forms (the forms that collect customer contacts)
+- `app/Livewire/Home/LeadForm.php`, `app/Livewire/Landing/LeadFormV2.php`, `app/Livewire/Home/ServiceRequestForm.php`
+- Their Blade views under `resources/views/livewire/**` — adding, removing, or renaming fields, changing required fields, validation, or where the data is sent (CRM, Google Sheets, email, GTM tracking)
+- Only pure styling of these forms (colors, spacing, font) is allowed — and you must still warn that it is a lead form and ask him to test a submission after.
+
+### 4. Checkout & orders flow (money)
+- Cart, checkout, payment, orders, invoices, coupons, discounts, prices, enrollments
+- `app/Livewire/Checkout/**`, `app/Livewire/Cart/**`, `CheckoutService`, `CartService`, `PaymentService`, `PricingService`, `MoyasarService`, `OrderApprovalService`, `BankTransferService`
+- Payment webhooks: `app/Http/Controllers/Webhooks/**` (Moyasar, Tabby, Tamara, Zoom)
+- Payment success / failed pages and order dashboard logic (`PaymentSuccess`, `PaymentFailed`, `DashboardOrders`, `DashboardOrderShow`, `DashboardPaymentReturn`)
+- Tamara / Tabby widgets and anything that changes what the customer pays
+
+### 5. Anything else risky
+- Git: committing, pushing, merging, switching branches, `reset`, deleting files
+- Emails / notifications that go to real customers
+- Login, registration, user accounts, certificates, course access
+- Deleting any file, or a change that touches more than ~5 files at once
+
+**When in doubt, treat it as a major update and ask.**
+
+## The warning message (use this exact format)
+
+When a request hits a major-update area, reply with:
+
+> ⚠️ **This is a major update — please ask the developer first.**
+>
+> **What you asked:** <one line, plain words>
+> **Why it is risky:** <one line — e.g. "it changes the checkout, so customers might not be able to pay">
+> **Area:** <Core code / Database / Lead form / Checkout & orders / Other>
+>
+> **Message to send to the developer (copy & paste):**
+> ```
+> Hi, I want to make this change on Miran: <request>.
+> Claude says it touches <area> (<main files>).
+> Can you check if it is applicable and do it / approve it?
+> ```
+>
+> I can still help with the **design part only** (for example: <safe alternative>) if you want.
+
+Then wait. Only continue if he confirms the **developer has approved** it — and even then, prefer to only prepare a description of the change for the developer rather than doing it yourself.
+
+## Safe working rules
+
+- Never run: `migrate`, `db:*`, `composer`, `npm install`, `git push`, `git reset`, `rm`, or anything that deletes data.
+- Allowed to run: `npm run dev` / `npm run build` (only if a change is not showing), `php artisan make:filament-page ... --no-interaction`, `php artisan view:clear`, `php artisan filament:optimize-clear`, `vendor/bin/pint --dirty`.
+- Change as little as possible. One request = small, focused change.
+- Keep both Arabic (RTL) and English (LTR) looking right, and keep dark mode working if the page has it.
+- Use the existing Tailwind v4 classes and existing components (`resources/views/components/**`) — don't invent new design systems.
+- Never paste API keys, passwords, or tokens in chat or files.
+- After each design change, check the page in the browser and tell him what changed.
+
+## Technical reference (for Claude)
+
+The full technical rules for this project are in `AGENTS.md` (Laravel 11, Livewire 3, Filament 4, Tailwind v4). Follow them for any code you write — but the rules in **this file win** for this copy: design work only, everything else goes to the developer first.
