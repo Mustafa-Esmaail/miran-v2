@@ -1,0 +1,70 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "php",
+            "args": [
+                "artisan",
+                "boost:mcp"
+            ]
+        },
+        "herd": {
+            "command": "php",
+            "args": [
+                "C:/Users/Hamma/.config/herd/bin/herd-mcp.phar"
+            ],
+            "env": {
+                "SITE_PATH": "D:\\mustafa_workspace\\miran-lms"
+            }
+        },
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "D:\\mustafa_workspace\\miran-lms"
+            ]
+        },
+        "context7": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@upstash/context7-mcp"
+            ]
+        },
+        "playwright": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@playwright/mcp@latest"
+            ]
+        },
+        "firecrawl": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "firecrawl-mcp"
+            ],
+            "env": {
+                "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY}"
+            }
+        },
+        "github": {
+            "type": "http",
+            "url": "https://api.githubcopilot.com/mcp/",
+            "headers": {
+                "Authorization": "Bearer ${GITHUB_PAT}"
+            }
+        },
+        "webmcp": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@mcp-b/chrome-devtools-mcp@2.3.2"
+            ]
+        },
+        "webmcp-docs": {
+            "type": "http",
+            "url": "https://docs.mcp-b.ai/mcp"
+        }
+    }
+}

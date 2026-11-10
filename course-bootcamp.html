@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>معسكر مِران | معسكر الذكاء الاصطناعي التطبيقي لبيئة العمل</title>
+
+    <!-- SEO & Social Meta -->
+    <meta name="description" content="معسكر تطبيقي في الذكاء الاصطناعي لبيئة العمل. 8 محاور عملية ومباشرة مع المدرب تمكنك من أتمتة وتخصيص مهامك بدون برمجة.">
+    <meta property="og:title" content="معسكر مِران | الذكاء الاصطناعي لبيئة العمل">
+    <meta property="og:description" content="خلّ الذكاء الاصطناعي يشتغل عنك، مو بس يجاوبك. 36 ساعة تدريبية و9 لقاءات مباشرة.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts: Alexandria & Readex Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#2B3939',
+                            /* Deep Forest / Slate */
+                            darker: '#1E2828',
+                            charcoal: '#374747',
+                            sand: '#D9B79F',
+                            /* Warm Sand Accent */
+                            'sand-light': '#F4ECE4',
+                            'sand-dark': '#99745C',
+                            cream: '#FAF7F3',
+                            /* Background Light */
+                            surface: '#FFFFFF',
+                            border: '#E3E9E9',
+                            green: '#4FB286',
+                            /* Active Green Accent */
+                            'green-dark': '#388E68',
+                            muted: '#627272',
+                            lightMuted: '#92A0A0'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Alexandria', 'sans-serif'],
+                        body: ['"Readex Pro"', 'sans-serif']
+                    },
+                    animation: {
+                        'marquee': 'marquee 28s linear infinite',
+                        'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': {
+                                transform: 'translateX(0%)'
+                            },
+                            '100%': {
+                                transform: 'translateX(50%)'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Readex Pro', sans-serif;
+            background-color: #FAF7F3;
+            color: #2B3939;
+            overflow-x: hidden;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-heading {
+            font-family: 'Alexandria', sans-serif;
+        }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #D9B79F;
+            border-radius: 9999px;
+        }
+        
+        .text-balance {
+            text-wrap: balance;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-brand-sand selection:text-brand-dark pb-20 lg:pb-0">
+
+    <!-- ==================== 1. ANNOUNCEMENT BAR ==================== -->
+    <header class="bg-brand-dark text-white text-xs sm:text-sm py-2 px-3 sm:px-4 sticky top-0 z-50 shadow-sm border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] sm:text-xs font-semibold bg-brand-sand text-brand-dark shrink-0">
+          <svg class="w-3 h-3 text-brand-sand-dark animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.37-.489-.745-1.08-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.12z" clip-rule="evenodd"/>
+          </svg>
+          <span class="hidden sm:inline">مقاعد محدودة</span>
+                <span class="sm:hidden">محدودة</span>
+                </span>
+                <span class="font-medium text-white/90 text-xs truncate">
+          الدفعة القادمة تبدأ [تاريخ البداية] · المقاعد محدودة
+        </span>
+                <span class="hidden md:inline text-white/40">·</span>
+                <span class="hidden md:inline text-white/70">للاستفسار: <a href="https://wa.me/966500000000" target="_blank" class="hover:text-brand-sand underline underline-offset-4">+966 50 000 0000</a></span>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+                <a href="#pricing" class="inline-flex items-center gap-1 font-semibold text-xs text-brand-sand hover:text-white transition-colors">
+                    <span>احجز</span>
+                    <span class="hidden sm:inline">مقعدك الآن</span>
+                    <svg class="w-3.5 h-3.5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 2. NAVBAR ==================== -->
+    <nav class="bg-brand-cream/90 backdrop-blur-md sticky top-[37px] sm:top-[41px] z-40 border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2.5 sm:gap-3 group">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-dark flex items-center justify-center text-brand-sand font-heading font-black text-lg sm:text-xl shadow-md group-hover:scale-105 transition-transform">
+                    مِ
+                </div>
+                <div>
+                    <span class="font-heading font-bold text-lg sm:text-xl text-brand-dark block tracking-tight leading-tight">مِران</span>
+                    <span class="text-[10px] sm:text-[11px] font-medium text-brand-muted block -mt-0.5">معسكرات تطبيقية</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-brand-muted">
+                <a href="#about" class="hover:text-brand-dark transition-colors">عن المعسكر</a>
+                <a href="#method" class="hover:text-brand-dark transition-colors">طريقة التعلم</a>
+                <a href="#curriculum" class="hover:text-brand-dark transition-colors">المحاور</a>
+                <a href="#projects" class="hover:text-brand-dark transition-colors">المشاريع</a>
+                <a href="#schedule" class="hover:text-brand-dark transition-colors">الجدول</a>
+                <a href="#faq" class="hover:text-brand-dark transition-colors">الأسئلة الشائعة</a>
+            </div>
+
+            <!-- Actions (Desktop + Mobile) -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <button onclick="openModal('contactModal')" class="hidden md:inline-flex items-center justify-center px-4 py-2 rounded-xl border border-brand-dark/20 text-brand-dark text-xs sm:text-sm font-semibold hover:bg-brand-dark/5 transition-all">
+          تواصل معنا
+        </button>
+                <a href="#pricing" class="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-brand-dark text-brand-sand hover:bg-brand-darker font-semibold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all">
+                    <span class="hidden sm:inline">احجز مقعدك</span>
+                    <span class="sm:hidden">احجز</span>
+                </a>
+                <!-- Mobile Hamburger Button -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl text-brand-dark hover:bg-brand-border/60 transition-colors" aria-label="القائمة">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden fixed inset-0 z-50 bg-brand-darker/70 backdrop-blur-sm">
+            <div class="bg-brand-cream w-4/5 max-w-sm h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+                <div>
+                    <div class="flex items-center justify-between pb-5 border-b border-brand-border">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-xl bg-brand-dark flex items-center justify-center text-brand-sand font-heading font-black text-base">
+                                مِ
+                            </div>
+                            <span class="font-heading font-bold text-lg text-brand-dark">معسكر مِران</span>
+                        </div>
+                        <button onclick="toggleMobileMenu()" class="p-2 text-brand-muted hover:text-brand-dark">
+              ✕
+            </button>
+                    </div>
+                    <div class="py-6 flex flex-col gap-4 text-base font-semibold text-brand-dark">
+                        <a href="#about" onclick="toggleMobileMenu()" class="hover:text-brand-sand-dark py-1">عن المعسكر</a>
+                        <a href="#method" onclick="toggleMobileMenu()" class="hover:text-brand-sand-dark py-1">طريقة التعلم</a>
+                        <a href="#curriculum" onclick="toggleMobileMenu()" class="hover:text-brand-sand-dark py-1">المحاور (8 محاور)</a>
+                        <a href="#projects" onclick="toggleMobileMenu()" class="hover:text-brand-sand-dark py-1">مشاريع تطبيقية</a>
+                        <a href="#schedule" onclick="toggleMobileMenu()" class="hover:text-brand-sand-dark py-1">الجدول والمواعيد</a>
+                        <a href="#pricing" onclick="toggleMobileMenu()" class="hover:text-brand-sand-dark py-1">التسجيل والأسعار</a>
+                        <a href="#faq" onclick="toggleMobileMenu()" class="hover:text-brand-sand-dark py-1">الأسئلة الشائعة</a>
+                    </div>
+                </div>
+                <div class="pt-6 border-t border-brand-border space-y-3">
+                    <button onclick="toggleMobileMenu(); openModal('contactModal');" class="w-full py-3 rounded-xl border border-brand-dark/20 text-brand-dark font-bold text-sm">
+            تواصل معنا عبر واتساب
+          </button>
+                    <a href="#pricing" onclick="toggleMobileMenu()" class="block text-center w-full py-3 rounded-xl bg-brand-dark text-brand-sand font-bold text-sm shadow-md">
+            احجز مقعدك الآن
+          </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== 3. HERO SECTION ==================== -->
+    <section id="about" class="pt-8 sm:pt-14 pb-14 sm:pb-24 relative overflow-hidden">
+        <!-- Ambient Blur Background -->
+        <div class="absolute -top-24 right-1/4 w-80 sm:w-96 h-80 sm:h-96 bg-brand-sand/25 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 left-5 w-64 sm:w-80 h-64 sm:h-80 bg-brand-green/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+
+                <!-- Text & Hero Content -->
+                <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-right">
+                    <!-- Live Badge -->
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-brand-border shadow-sm text-[11px] sm:text-xs font-medium text-brand-dark max-w-full">
+                        <span class="w-2 h-2 rounded-full bg-brand-green animate-ping shrink-0"></span>
+                        <span class="w-2 h-2 rounded-full bg-brand-green -mr-3 shrink-0"></span>
+                        <span class="truncate">التسجيل مفتوح للدفعة القادمة</span>
+                        <span class="text-brand-border hidden sm:inline">|</span>
+                        <span class="text-brand-muted hidden sm:inline truncate">معسكر الذكاء الاصطناعي التطبيقي لبيئة العمل</span>
+                    </div>
+
+                    <!-- Mobile Sub-heading -->
+                    <div class="sm:hidden text-xs font-semibold text-brand-sand-dark">
+                        معسكر الذكاء الاصطناعي التطبيقي لبيئة العمل
+                    </div>
+
+                    <!-- Main Title -->
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-black text-brand-dark leading-[1.25] text-balance">
+                        خلّ الذكاء الاصطناعي
+                        <span class="text-transparent bg-clip-text bg-gradient-to-l from-brand-sand-dark via-brand-sand to-brand-sand-dark block mt-1">
+              يشتغل عنك،
+            </span> مو بس يجاوبك
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="text-base sm:text-xl text-brand-muted leading-relaxed max-w-2xl text-balance">
+                        8 محاور تطبيقية مباشرة مع المدرب، من الأساس إلى أنظمة تشتغل لحالها في شغلك. بدون برمجة، وبدون محاضرات نظرية.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                        <a href="#pricing" class="w-full sm:w-auto px-8 py-3.5 sm:py-4 rounded-xl bg-brand-dark text-brand-sand hover:bg-brand-darker font-bold text-sm sm:text-base shadow-xl shadow-brand-dark/15 text-center inline-flex items-center justify-center gap-2">
+                            <span>احجز مقعدك</span>
+                            <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                        <a href="#curriculum" class="w-full sm:w-auto px-6 py-3.5 sm:py-4 rounded-xl bg-white hover:bg-brand-sand-light/50 border border-brand-border text-brand-dark font-semibold text-sm sm:text-base text-center inline-flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4 text-brand-sand-dark" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+                            <span>راجع المحاور أولًا</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Proof with Stars -->
+                    <div class="pt-5 border-t border-brand-border flex flex-col sm:flex-row sm:items-center gap-3">
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-amber-400 text-sm">
+                                ★★★★★
+                            </div>
+                            <div class="flex -space-x-2 space-x-reverse overflow-hidden">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-dark text-white font-heading font-bold text-[10px] ring-2 ring-white">س</span>
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-sand text-brand-dark font-heading font-bold text-[10px] ring-2 ring-white">م</span>
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-charcoal text-white font-heading font-bold text-[10px] ring-2 ring-white">ع</span>
+                            </div>
+                        </div>
+                        <p class="text-xs sm:text-sm font-medium text-brand-muted">
+                            موظفون ومدراء من قطاعات مختلفة تعلموا مع <strong class="text-brand-dark">مِران</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Left Column: Interactive UI Simulation (سكرتيرك الافتراضي) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative bg-white rounded-3xl p-5 sm:p-7 shadow-2xl border border-brand-border">
+
+                        <!-- Window Header (Mac Dots + Title) -->
+                        <div class="flex items-center justify-between pb-4 mb-4 border-b border-brand-border">
+                            <div class="flex items-center gap-2.5">
+                                <div class="flex items-center gap-1.5 ml-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-xs sm:text-sm text-brand-dark">سكرتيرك الافتراضي</h3>
+                                    <div class="flex items-center gap-1 text-[10px] text-brand-green font-medium">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse"></span>
+                                        <span>يشتغل الآن تلقائيًا</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-brand-cream text-brand-dark">المحور 8</span>
+                        </div>
+
+                        <!-- Chat Simulation -->
+                        <div class="space-y-3.5">
+                            <!-- Prompt bubble -->
+                            <div class="bg-brand-cream/80 p-3 rounded-2xl rounded-tr-none text-xs text-brand-dark border border-brand-border/60">
+                                <span class="block font-semibold text-brand-muted text-[10px] mb-0.5">طلب المستخدم:</span> "لخّص لي اجتماع اليوم، وطلّع المهام بتواريخها ومسؤوليها."
+                            </div>
+
+                            <!-- Output Card -->
+                            <div class="bg-brand-dark text-white p-3.5 sm:p-4 rounded-2xl space-y-2.5 shadow-inner">
+                                <div class="flex items-center justify-between text-xs pb-2 border-b border-white/10">
+                                    <span class="text-brand-sand font-semibold text-xs">الملخص جاهز</span>
+                                    <span class="text-white/60 text-[10px] bg-white/10 px-2 py-0.5 rounded-full">3 قرارات · 4 مهام</span>
+                                </div>
+
+                                <!-- Action Items -->
+                                <div class="space-y-1.5 text-xs">
+                                    <div class="flex items-center justify-between p-2 rounded-xl bg-white/5 border border-white/5 text-[11px]">
+                                        <span class="font-medium text-white/90">مراجعة ميزانية الربع الثالث</span>
+                                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-brand-sand/20 text-brand-sand font-medium">سارة · الأحد</span>
+                                    </div>
+                                    <div class="flex items-center justify-between p-2 rounded-xl bg-white/5 border border-white/5 text-[11px]">
+                                        <span class="font-medium text-white/90">إرسال العرض المالي للعميل</span>
+                                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-brand-sand/20 text-brand-sand font-medium">خالد · الثلاثاء</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Scheduled Task Badge -->
+                            <div class="flex items-center justify-between p-2.5 rounded-2xl bg-brand-sand-light/60 border border-brand-sand/30">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-xl bg-brand-sand text-brand-dark flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  </span>
+                                    <div>
+                                        <h4 class="text-[11px] font-bold text-brand-dark">أتمتة مجدولة: فرز البريد</h4>
+                                        <span class="text-[10px] text-brand-muted">يعمل كل يوم 7:00 ص</span>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] font-bold text-brand-green px-2 py-0.5 bg-white rounded-lg shadow-sm">شغّال</span>
+                            </div>
+
+                            <!-- Time Saved Metric -->
+                            <div class="bg-gradient-to-r from-brand-cream to-white p-3 rounded-2xl border border-brand-border flex items-center justify-between">
+                                <span class="text-[11px] font-medium text-brand-muted">وفّرت هذا الأسبوع:</span>
+                                <span class="font-heading font-black text-brand-dark text-xs bg-brand-sand/25 px-2.5 py-1 rounded-lg">
+                  6 ساعات عمل
+                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Hero Stats Strip (Responsive 2x2 on Mobile, 4-col on Desktop) -->
+            <div class="mt-12 sm:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 p-5 sm:p-8 rounded-3xl bg-brand-dark text-white shadow-xl">
+                <div class="p-3 text-center sm:text-right border-l border-b sm:border-b-0 border-white/10 flex sm:flex-row flex-col items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brand-sand shrink-0">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <span class="block font-heading font-black text-2xl sm:text-3xl text-brand-sand">36</span>
+                        <span class="text-[11px] sm:text-xs text-white/70 font-medium">ساعة تدريبية</span>
+                    </div>
+                </div>
+                <div class="p-3 text-center sm:text-right border-b sm:border-b-0 lg:border-l border-white/10 flex sm:flex-row flex-col items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brand-sand shrink-0">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <div>
+                        <span class="block font-heading font-black text-2xl sm:text-3xl text-brand-sand">8</span>
+                        <span class="text-[11px] sm:text-xs text-white/70 font-medium">محاور تطبيقية</span>
+                    </div>
+                </div>
+                <div class="p-3 text-center sm:text-right border-l border-white/10 flex sm:flex-row flex-col items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brand-sand shrink-0">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div>
+                        <span class="block font-heading font-black text-2xl sm:text-3xl text-brand-sand">3</span>
+                        <span class="text-[11px] sm:text-xs text-white/70 font-medium">أسابيع فقط</span>
+                    </div>
+                </div>
+                <div class="p-3 text-center sm:text-right flex sm:flex-row flex-col items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brand-sand shrink-0">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div>
+                        <span class="block font-heading font-black text-2xl sm:text-3xl text-brand-sand">9</span>
+                        <span class="text-[11px] sm:text-xs text-white/70 font-medium">لقاءات مباشرة</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 4. INDUSTRIES MARQUEE ==================== -->
+    <section class="py-4 sm:py-6 bg-brand-darker border-y border-white/10 overflow-hidden relative">
+        <div class="flex items-center">
+            <div class="flex shrink-0 animate-marquee whitespace-nowrap gap-6 sm:gap-8 text-white/80 font-medium text-xs sm:text-sm">
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>الذكاء الاصطناعي في بيئة العمل</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>القيادة والإدارة</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>التسويق الرقمي</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>الموارد البشرية</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>المالية والمحاسبة</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>تحليل البيانات</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>المبيعات</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>خدمة العملاء</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>إدارة المشاريع</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>التصميم والمحتوى</span>
+            </div>
+            <div class="flex shrink-0 animate-marquee whitespace-nowrap gap-6 sm:gap-8 text-white/80 font-medium text-xs sm:text-sm mr-6 sm:mr-8">
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>الذكاء الاصطناعي في بيئة العمل</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>القيادة والإدارة</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>التسويق الرقمي</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>الموارد البشرية</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>المالية والمحاسبة</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>تحليل البيانات</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>المبيعات</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>خدمة العملاء</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>إدارة المشاريع</span>
+                <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>التصميم والمحتوى</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5. PILLARS (فكرة المعسكر) ==================== -->
+    <section class="py-14 sm:py-20 bg-brand-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-right max-w-3xl mb-10 sm:mb-14">
+                <span class="text-xs font-bold text-brand-sand-dark tracking-wide uppercase block mb-2">فكرة المعسكر</span>
+                <h2 class="text-2xl sm:text-4xl font-heading font-black text-brand-dark mb-3">
+                    معسكر تطبيقي، مو محاضرات نظرية
+                </h2>
+                <p class="text-brand-muted text-sm sm:text-base leading-relaxed">
+                    كل محور تطلع منه بشيء جاهز تستخدمه في شغلك من بكرة. أربع مراحل، كل وحدة تبني على اللي قبلها.
+                </p>
+            </div>
+
+            <!-- Bento Grid (Responsive 1-col on mobile, 2-col tablet, 4-col desktop) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+
+                <!-- Pillar 01 -->
+                <div class="bg-white p-6 sm:p-7 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <span class="font-heading font-black text-2xl sm:text-3xl text-brand-sand">01</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-sand-light text-brand-sand-dark">المحور 1–2</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg sm:text-xl text-brand-dark mb-2">تأسّس</h3>
+                        <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                            تفهم كيف يفكر الذكاء الاصطناعي وتتقن توجيهه بأوامر دقيقة تطلع النتيجة الصحيحة من أول مرة.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-3.5 border-t border-brand-border/60 text-xs font-semibold text-brand-dark flex items-center gap-1">
+                        <span>مدخل + توجيه احترافي</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 02 -->
+                <div class="bg-white p-6 sm:p-7 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <span class="font-heading font-black text-2xl sm:text-3xl text-brand-sand">02</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-sand-light text-brand-sand-dark">المحور 3–4</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg sm:text-xl text-brand-dark mb-2">تنتج</h3>
+                        <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                            صور، فيديو، عروض، وتقارير مرئية جاهزة في جلسة وحدة بدون الحاجة لمصمم أو ممنتج خارجي.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-3.5 border-t border-brand-border/60 text-xs font-semibold text-brand-dark flex items-center gap-1">
+                        <span>محتوى مرئي + عروض</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 03 -->
+                <div class="bg-white p-6 sm:p-7 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <span class="font-heading font-black text-2xl sm:text-3xl text-brand-sand">03</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-sand-light text-brand-sand-dark">المحور 5–6</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg sm:text-xl text-brand-dark mb-2">تخصّص</h3>
+                        <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                            مساعد شخصي تبنيه لمهمة معينة في شغلك يراجع ويدقق، مع تحليل بياناتك ولوحات معلومات ذكية.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-3.5 border-t border-brand-border/60 text-xs font-semibold text-brand-dark flex items-center gap-1">
+                        <span>مساعد مخصص + تحليل</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 04 -->
+                <div class="bg-brand-dark text-white p-6 sm:p-7 rounded-3xl border border-brand-darker shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <span class="font-heading font-black text-2xl sm:text-3xl text-brand-sand">04</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-white/10 text-brand-sand">المحور 7–8</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg sm:text-xl text-white mb-2">تؤتمت</h3>
+                        <p class="text-xs sm:text-sm text-white/80 leading-relaxed">
+                            مهامك المتكررة تشتغل لحالها عبر مسارات أتمتة مجدولة وسكرتير افتراضي ينهي مهامك قبل أن تبدأ دوامك.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-3.5 border-t border-white/10 text-xs font-semibold text-brand-sand flex items-center gap-1">
+                        <span>أتمتة + مشروع التخرج</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 6. METHOD (طريقة التعلم) ==================== -->
+    <section id="method" class="py-14 sm:py-20 bg-white border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-xs font-bold text-brand-sand-dark tracking-wide uppercase block mb-2">طريقة التعلم</span>
+                <h2 class="text-2xl sm:text-4xl font-heading font-black text-brand-dark mb-3">
+                    ما تتفرج، تشتغل ونراجع لك
+                </h2>
+                <p class="text-brand-muted text-xs sm:text-base">
+                    نفس الدورة تتكرر مع كل محور، عشان كل مهارة تثبت قبل اللي بعدها.
+                </p>
+            </div>
+
+            <!-- Steps Timeline Grid (Vertical Rail on Mobile, Horizontal on Desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+
+                <!-- Step 1 -->
+                <div class="bg-brand-cream/60 p-5 sm:p-6 rounded-3xl border border-brand-border flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-dark text-brand-sand font-heading font-bold text-base sm:text-lg flex items-center justify-center mb-4 shadow-md">
+                            1
+                        </div>
+                        <span class="text-xs font-semibold text-brand-sand-dark block mb-1">الخطوة الأولى</span>
+                        <h3 class="font-heading font-bold text-base sm:text-lg text-brand-dark mb-2">تدريب مباشر</h3>
+                        <p class="text-xs text-brand-muted leading-relaxed">
+                            لقاء مباشر مع المدرب، نشرح ونطبّق سوا خطوة بخطوة على أدوات حية.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-brand-cream/60 p-5 sm:p-6 rounded-3xl border border-brand-border flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-sand text-brand-dark font-heading font-bold text-base sm:text-lg flex items-center justify-center mb-4 shadow-md">
+                            2
+                        </div>
+                        <span class="text-xs font-semibold text-brand-sand-dark block mb-1">الخطوة الثانية</span>
+                        <h3 class="font-heading font-bold text-base sm:text-lg text-brand-dark mb-2">تطبّق على شغلك</h3>
+                        <p class="text-xs text-brand-muted leading-relaxed">
+                            بين اللقاءات تطبّق على مهام حقيقية من ملفات وعمل جهتك أنت مو أمثلة افتراضية.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-brand-cream/60 p-5 sm:p-6 rounded-3xl border border-brand-border flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-dark text-brand-sand font-heading font-bold text-base sm:text-lg flex items-center justify-center mb-4 shadow-md">
+                            3
+                        </div>
+                        <span class="text-xs font-semibold text-brand-sand-dark block mb-1">الخطوة الثالثة</span>
+                        <h3 class="font-heading font-bold text-base sm:text-lg text-brand-dark mb-2">المدرب يراجع</h3>
+                        <p class="text-xs text-brand-muted leading-relaxed">
+                            المدرب يراجع شغلك ويصحح الأخطاء ويوجهك قبل ما ننتقل للمستوى التالي.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-brand-cream/60 p-5 sm:p-6 rounded-3xl border border-brand-border flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-green text-white font-heading font-bold text-base sm:text-lg flex items-center justify-center mb-4 shadow-md">
+                            4
+                        </div>
+                        <span class="text-xs font-semibold text-brand-green block mb-1">الخطوة الرابعة</span>
+                        <h3 class="font-heading font-bold text-base sm:text-lg text-brand-dark mb-2">المحور اللي بعده</h3>
+                        <p class="text-xs text-brand-muted leading-relaxed">
+                            نبني على اللي تعلمته وننتقل للمحور التالي بثقة ومخرجات ملموسة جاهزة.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Note Bar (Responsive) -->
+            <div class="mt-8 sm:mt-10 p-4 sm:p-5 rounded-2xl bg-brand-sand-light/50 border border-brand-sand/40 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                    <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-brand-sand flex items-center justify-center text-brand-dark shrink-0">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </span>
+                    <span class="text-xs sm:text-sm font-medium text-brand-dark">
+            وكل الجلسات مسجّلة ترجع لها متى ما تبي، ومعك قوالب وملفات ومجتمع تسأل فيه.
+          </span>
+                </div>
+                <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pt-2 sm:pt-0">
+                    <span class="text-[11px] font-semibold px-2.5 py-1 bg-white rounded-lg border border-brand-border text-brand-dark whitespace-nowrap">تسجيلات</span>
+                    <span class="text-[11px] font-semibold px-2.5 py-1 bg-white rounded-lg border border-brand-border text-brand-dark whitespace-nowrap">قوالب وملفات</span>
+                    <span class="text-[11px] font-semibold px-2.5 py-1 bg-white rounded-lg border border-brand-border text-brand-dark whitespace-nowrap">مجتمع</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 7. CURRICULUM (المحاور) ==================== -->
+    <section id="curriculum" class="py-14 sm:py-24 bg-brand-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 sm:mb-12">
+                <div class="text-right max-w-2xl">
+                    <span class="text-xs font-bold text-brand-sand-dark tracking-wide uppercase block mb-2">المنهج</span>
+                    <h2 class="text-2xl sm:text-4xl font-heading font-black text-brand-dark mb-3">
+                        8 محاور، وكل محور تطلع منه بشيء جاهز
+                    </h2>
+                    <p class="text-brand-muted text-xs sm:text-base leading-relaxed">
+                        من أول سؤال تسأله للذكاء الاصطناعي، إلى سكرتير افتراضي يشتغل عنك. كل محور مبني على اللي قبله.
+                    </p>
+                </div>
+
+                <!-- Week Switcher Tabs (Scrollable on mobile) -->
+                <div class="flex items-center gap-1.5 p-1.5 rounded-2xl bg-white border border-brand-border shadow-sm overflow-x-auto no-scrollbar shrink-0">
+                    <button onclick="switchWeek(1)" id="tab-week-1" class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl font-heading font-semibold text-xs sm:text-sm bg-brand-dark text-brand-sand transition-all whitespace-nowrap">
+            الأسبوع الأول (1–4)
+          </button>
+                    <button onclick="switchWeek(2)" id="tab-week-2" class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl font-heading font-semibold text-xs sm:text-sm text-brand-muted hover:text-brand-dark transition-all whitespace-nowrap">
+            الأسبوع الثاني (5–7)
+          </button>
+                    <button onclick="switchWeek(3)" id="tab-week-3" class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl font-heading font-semibold text-xs sm:text-sm text-brand-muted hover:text-brand-dark transition-all whitespace-nowrap">
+            الأسبوع الثالث (8)
+          </button>
+                </div>
+            </div>
+
+            <!-- WEEK 1 CONTAINER -->
+            <div id="week-1-content" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <!-- Module 01 -->
+                <div class="bg-white p-5 sm:p-7 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-brand-cream text-brand-muted">المحور 01</span>
+                            <span class="text-xs font-semibold text-brand-green bg-brand-green/10 px-2 py-0.5 rounded">الأساس المتين</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg sm:text-xl text-brand-dark mb-2">مدخل إلى الذكاء الاصطناعي</h3>
+                        <p class="text-xs sm:text-sm text-brand-muted leading-relaxed mb-5">
+                            تعرف كيف تفكر النماذج اللغوية، وأي أداة تروح لها في أي مهمة بدقة واحتراف.
+                        </p>
+                    </div>
+                    <div class="p-3 sm:p-3.5 rounded-2xl bg-brand-sand-light/40 border border-brand-sand/30 flex items-center justify-between text-xs">
+                        <span class="text-brand-sand-dark font-medium">تطلع بـ:</span>
+                        <span class="font-bold text-brand-dark truncate mr-2">معرفة واضحة بنموذج كل مهمة</span>
+                    </div>
+                </div>
+
+                <!-- Module 02 (Featured) -->
+                <div class="bg-white p-5 sm:p-7 rounded-3xl border-2 border-brand-sand shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-brand-sand text-brand-dark">المحور 02 · الأهم</span>
+                            <span class="text-xs font-semibold text-brand-sand-dark bg-brand-sand-light px-2.5 py-0.5 rounded">قوالب احترافية</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg sm:text-xl text-brand-dark mb-2">التوجيه الاحترافي (Prompting)</h3>
+                        <p class="text-xs sm:text-sm text-brand-muted leading-relaxed mb-4">
+                            أهم مهارة في المعسكر: تشريح الأوامر الضعيفة وتحويلها إلى قوالب محكمة تطلع نتيجة صحيحة من أول مرة.
+                        </p>
+                        <div class="space-y-1.5 text-xs text-brand-muted mb-5 bg-brand-cream p-3 rounded-xl">
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>
+                                <span>تشريح الأمر الضعيف وتحويله لاحترافي</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-sand"></span>
+                                <span>رؤية الفرق بالنتيجة فورًا قدامك</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 sm:p-3.5 rounded-2xl bg-brand-sand-light/60 border border-brand-sand/40 flex items-center justify-between text-xs">
+                        <span class="text-brand-sand-dark font-medium">تطلع بـ:</span>
+                        <span class="font-bold text-brand-dark truncate mr-2">قوالب PDF + ملف تطبيق جاهز للأوامر</span>
+                    </div>
+                </div>
+
+                <!-- Module 03 -->
+                <div class="bg-white p-5 sm:p-7 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-brand-cream text-brand-muted">المحور 03</span>
+                            <span class="text-xs font-semibold text-brand-muted">إنتاج مرئي</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg sm:text-xl text-brand-dark mb-2">الصور والفيديو</h3>
+                        <p class="text-xs sm:text-sm text-brand-muted leading-relaxed mb-5">
+                            إنتاج مواد بصرية وفيديوهات دعائية كاملة بدون خبرة سابقة في التصميم أو برامج المونتاج المعقدة.
+                        </p>
+                    </div>
+                    <div class="p-3 sm:p-3.5 rounded-2xl bg-brand-sand-light/40 border border-brand-sand/30 flex items-center justify-between text-xs">
+                        <span class="text-brand-sand-dark font-medium">تطلع بـ:</span>
+                        <span class="font-bold text-brand-dark truncate mr-2">فيديو قصير أو مادة مرئية من صنعك</span>
+                    </div>
+                </div>
+
+                <!-- Module 04 -->
+                <div class="bg-white p-5 sm:p-7 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-brand-cream text-brand-muted">المحور 04</span>
+                            <span class="text-xs font-semibold text-brand-muted">عروض احترافية</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg sm:text-xl text-brand-dark mb-2">العروض والتقارير المرئية</h3>
+                        <p class="text-xs sm:text-sm text-brand-muted leading-relaxed mb-5">
+                            شغل أيام يخلص في جلسة وحدة: عروض تقديمية مقنعة للإدارة وتقارير تنفيذية عالية الجودة.
+                        </p>
+                    </div>
+                    <div class="p-3 sm:p-3.5 rounded-2xl bg-brand-sand-light/40 border border-brand-sand/30 flex items-center justify-between text-xs">
+                        <span class="text-brand-sand-dark font-medium">تطلع بـ:</span>
+                        <span class="font-bold text-brand-dark truncate mr-2">عرض تقديمي تنفيذي متكامل جاهز للعرض</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WEEK 2 CONTAINER (Hidden by default) -->
+            <div id="week-2-content" class="hidden grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                <!-- Module 05 -->
+                <div class="bg-white p-5 sm:p-7 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-brand-cream text-brand-muted">المحور 05</span>
+                            <span class="text-xs font-semibold text-brand-green bg-brand-green/10 px-2 py-0.5 rounded">بدون برمجة</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg sm:text-xl text-brand-dark mb-2">المساعد الذكي المخصص</h3>
+                        <p class="text-xs sm:text-sm text-brand-muted leading-relaxed mb-5">
+                            موظف افتراضي لمهمة محددة، تبنيه بقيود وتعليمات جهتك، يراجع ويدقق مستنداتك بدقة.
+                        </p>
+                    </div>
+                    <div class="p-3 sm:p-3.5 rounded-2xl bg-brand-sand-light/40 border border-brand-sand/30 flex items-center justify-between text-xs">
+                        <span class="text-brand-sand-dark font-medium">تطلع بـ:</span>
+                        <span class="font-bold text-brand-dark truncate mr-2">مساعد مخصص شغّال بقيودك</span>
+                    </div>
+                </div>
+
+                <!-- Module 06 -->
+                <div class="bg-white p-5 sm:p-7 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-brand-cream text-brand-muted">المحور 06</span>
+                            <span class="text-xs font-semibold text-brand-muted">ذكاء الأعمال</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg sm:text-xl text-brand-dark mb-2">تحليل البيانات</h3>
+                        <p class="text-xs sm:text-sm text-brand-muted leading-relaxed mb-5">
+                            ترفع ملفاتك وجداولك، يكتشف الفروقات ويبني لك رسوم ولوحات ومؤشرات بدون كتابة معادلة واحدة.
+                        </p>
+                    </div>
+                    <div class="p-3 sm:p-3.5 rounded-2xl bg-brand-sand-light/40 border border-brand-sand/30 flex items-center justify-between text-xs">
+                        <span class="text-brand-sand-dark font-medium">تطلع بـ:</span>
+                        <span class="font-bold text-brand-dark truncate mr-2">تقرير بيانات بمؤشرات ورسوم</span>
+                    </div>
+                </div>
+
+                <!-- Module 07 -->
+                <div class="bg-white p-5 sm:p-7 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-brand-cream text-brand-muted">المحور 07</span>
+                            <span class="text-xs font-semibold text-brand-sand-dark bg-brand-sand-light px-2 py-0.5 rounded">أتمتة</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg sm:text-xl text-brand-dark mb-2">أتمتة المهام</h3>
+                        <p class="text-xs sm:text-sm text-brand-muted leading-relaxed mb-5">
+                            ربط التطبيقات ببعضها: مهامك المتكررة اليومية تنفذ تلقائيًا دون تدخل يدوي مستمر.
+                        </p>
+                    </div>
+                    <div class="p-3 sm:p-3.5 rounded-2xl bg-brand-sand-light/40 border border-brand-sand/30 flex items-center justify-between text-xs">
+                        <span class="text-brand-sand-dark font-medium">تطلع بـ:</span>
+                        <span class="font-bold text-brand-dark truncate mr-2">مهمة مؤتمتة شغّالة فعليًا</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WEEK 3 CONTAINER (Hidden by default) -->
+            <div id="week-3-content" class="hidden">
+                <div class="bg-brand-dark text-white p-6 sm:p-10 rounded-3xl border border-brand-darker shadow-2xl relative overflow-hidden">
+                    <div class="absolute -top-24 -left-24 w-80 h-80 bg-brand-sand/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center relative">
+                        <div class="lg:col-span-7 space-y-4">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-brand-sand text-brand-dark font-bold text-xs">
+                                <span>المحور 08 · مشروع التخرج النهائي</span>
+                            </div>
+                            <h3 class="text-xl sm:text-3xl font-heading font-black text-brand-sand">
+                                السكرتير الافتراضي
+                            </h3>
+                            <p class="text-white/80 text-xs sm:text-base leading-relaxed">
+                                تجمع كل اللي تعلمته في نظام متكامل واحد يشتغل عنك ويوفر وقتك اليومي.
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2">
+                                <div class="p-3 rounded-2xl bg-white/5 border border-white/10 text-xs">
+                                    <span class="block font-bold text-brand-sand mb-0.5">فرز البريد</span>
+                                    <span class="text-white/70 text-[11px]">يفرز رسائلك ويطلّع المواعيد والمهام العاجلة</span>
+                                </div>
+                                <div class="p-3 rounded-2xl bg-white/5 border border-white/10 text-xs">
+                                    <span class="block font-bold text-brand-sand mb-0.5">حضور الاجتماعات</span>
+                                    <span class="text-white/70 text-[11px]">يلخص القرارات ويوزع المهام على الفريق</span>
+                                </div>
+                                <div class="p-3 rounded-2xl bg-white/5 border border-white/10 text-xs">
+                                    <span class="block font-bold text-brand-sand mb-0.5">قائمة المهام</span>
+                                    <span class="text-white/70 text-[11px]">يكتب خطتك اليومية بتواريخها ومسؤوليها</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-5 bg-white/10 p-5 sm:p-6 rounded-2xl border border-white/10 text-center space-y-3">
+                            <span class="text-xs text-white/60 block">تطلع بعد الأسبوع الثالث بـ:</span>
+                            <h4 class="font-heading font-bold text-sm sm:text-base text-white">نظام ذكاء اصطناعي متكامل يشتغل معك في بيئة عملك</h4>
+                            <a href="#pricing" class="inline-block w-full py-3 rounded-xl bg-brand-sand text-brand-dark font-bold text-xs sm:text-sm hover:bg-white transition-colors">
+                احجز مقعدك وابدأ التطبيق
+              </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download Button -->
+            <div class="mt-8 sm:mt-12 text-center">
+                <button onclick="alert('سيتم إرسال المنهج التفصيلي إلى بريدك عند التسجيل أو التواصل معنا.')" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white border border-brand-border text-xs sm:text-sm font-semibold text-brand-dark hover:text-brand-sand-dark transition-colors">
+          <svg class="w-4 h-4 text-brand-sand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span>حمّل المنهج كاملًا (PDF)</span>
+        </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 8. PROJECTS (مشاريع تطبيقية) ==================== -->
+    <section id="projects" class="py-14 sm:py-20 bg-white border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-16">
+                <div class="text-right max-w-2xl">
+                    <span class="text-xs font-bold text-brand-sand-dark tracking-wide uppercase block mb-1">مشاريع تطبيقية</span>
+                    <h2 class="text-2xl sm:text-4xl font-heading font-black text-brand-dark mb-2">
+                        نماذج من اللي بتبنيه بنفسك
+                    </h2>
+                    <p class="text-brand-muted text-xs sm:text-base leading-relaxed">
+                        أدوات حقيقية تستخدمها في شغلك بعد المعسكر.
+                    </p>
+                </div>
+                <a href="#curriculum" class="text-xs sm:text-sm font-semibold text-brand-sand-dark hover:underline flex items-center gap-1">
+                    <span>شوف كل المشاريع في المنهج</span>
+                    <svg class="w-3.5 h-3.5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Projects Strip (Scrollable carousel on mobile, 3-col on desktop) -->
+            <div class="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 overflow-x-auto snap-x snap-mandatory pb-4 sm:pb-0 custom-scrollbar">
+
+                <!-- Project 1 -->
+                <div class="min-w-[85%] sm:min-w-0 snap-center bg-brand-cream/50 rounded-3xl p-5 sm:p-7 border border-brand-border flex flex-col justify-between shrink-0 sm:shrink">
+                    <div>
+                        <div class="bg-white p-3.5 rounded-2xl border border-brand-border mb-4 shadow-sm">
+                            <div class="flex items-center justify-between text-xs pb-2 mb-2 border-b border-brand-border text-brand-muted">
+                                <span class="font-bold text-brand-dark">المدقق الآلي</span>
+                                <span class="text-red-500 font-medium text-[11px]">المبلغ لا يطابق اللائحة 4.2</span>
+                            </div>
+                            <div class="text-[11px] p-2 rounded bg-amber-50 text-amber-900 border border-amber-200">
+                                اقتراح: راجع بند المصروفات التشغيلية المرفق بالصفحة 2
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-brand-green/10 text-brand-green">بدون برمجة</span>
+                            <span class="text-[11px] font-semibold text-brand-muted">المحور 5</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-base sm:text-xl text-brand-dark mb-1.5">المدقق الآلي للفريق</h3>
+                        <p class="text-xs text-brand-muted leading-relaxed">
+                            مساعد مدرّب على لوائح جهتك، يراجع أي تقرير ويطلّع لك الأخطاء والملاحظات بدون شرح مسبق.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="min-w-[85%] sm:min-w-0 snap-center bg-brand-cream/50 rounded-3xl p-5 sm:p-7 border border-brand-border flex flex-col justify-between shrink-0 sm:shrink">
+                    <div>
+                        <div class="bg-white p-3.5 rounded-2xl border border-brand-border mb-4 shadow-sm">
+                            <div class="flex items-center justify-between text-xs pb-2 mb-2 border-b border-brand-border">
+                                <span class="font-bold text-brand-dark">المبيعات الشهرية</span>
+                                <span class="text-brand-green font-bold text-[11px]">+18% نمو</span>
+                            </div>
+                            <div class="text-[11px] p-2 rounded bg-blue-50 text-blue-900 border border-blue-200">
+                                فرق في الأرقام: الصف 14 يحتوي تكراراً في الفواتير
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">تحليل فوري</span>
+                            <span class="text-[11px] font-semibold text-brand-muted">المحور 6</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-base sm:text-xl text-brand-dark mb-1.5">تقرير بيانات ذكي</h3>
+                        <p class="text-xs text-brand-muted leading-relaxed">
+                            ترفع جدولك، يكتشف الفروقات بالأرقام، ويبني لك رسوم ولوحات جاهزة للعرض على الإدارة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="min-w-[85%] sm:min-w-0 snap-center bg-brand-cream/50 rounded-3xl p-5 sm:p-7 border border-brand-border flex flex-col justify-between shrink-0 sm:shrink">
+                    <div>
+                        <div class="bg-white p-3.5 rounded-2xl border border-brand-border mb-4 shadow-sm space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="font-bold text-brand-dark">7:00 ص · يبدأ تلقائيًا</span>
+                                <span class="text-brand-green font-semibold text-[11px]">مكتمل</span>
+                            </div>
+                            <div class="text-[11px] text-brand-muted">
+                                يسحب بيانات أمس من ملفات الفريق ويرسل الملخص لبريدك
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-brand-sand-light text-brand-sand-dark">أتمتة</span>
+                            <span class="text-[11px] font-semibold text-brand-muted">المحور 7</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-base sm:text-xl text-brand-dark mb-1.5">مهمة الساعة 7 الصباح</h3>
+                        <p class="text-xs text-brand-muted leading-relaxed">
+                            مسار مؤتمت ينفذ مهمتك كل يوم قبل ما يبدأ دوامك، ولما تبدأ تلقاها منفّذة.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 9. TRANSFORMATION (قبل وبعد) ==================== -->
+    <section class="py-14 sm:py-20 bg-brand-cream border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+                <span class="text-xs font-bold text-brand-sand-dark tracking-wide uppercase block mb-1">التحوّل</span>
+                <h2 class="text-2xl sm:text-4xl font-heading font-black text-brand-dark mb-3">
+                    وش يتغير بعد المعسكر؟
+                </h2>
+                <p class="text-brand-muted text-xs sm:text-base">
+                    وقتك يروح للقرارات والتفكير بدل المهام المتكررة.
+                </p>
+            </div>
+
+            <!-- Before & After Comparison Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 max-w-4xl mx-auto">
+
+                <!-- BEFORE -->
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-red-200/60 shadow-sm relative">
+                    <div class="flex items-center justify-between pb-3 sm:pb-4 mb-4 sm:mb-6 border-b border-brand-border">
+                        <h3 class="font-heading font-bold text-base sm:text-lg text-brand-dark">قبل المعسكر</h3>
+                        <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-red-50 text-red-700">اليوم</span>
+                    </div>
+                    <ul class="space-y-3 sm:space-y-4 text-xs sm:text-sm text-brand-muted">
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-red-500 font-bold shrink-0">✕</span>
+                            <span>تجرب أدوات كثيرة وما تعرف أيها يناسب مهمتك بالضبط.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-red-500 font-bold shrink-0">✕</span>
+                            <span>تكتب أوامر عامة وتعيد المحاولة أكثر من مرة بدون نتيجة دقيقة.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-red-500 font-bold shrink-0">✕</span>
+                            <span>تقضي ساعات طويلة في مهام متكررة وروتينية كل يوم.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-red-500 font-bold shrink-0">✕</span>
+                            <span>تقرير أو عرض واحد ياخذ منك أيام عمل كاملة وإجهاد.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- AFTER -->
+                <div class="bg-brand-dark text-white p-6 sm:p-8 rounded-3xl border border-brand-darker shadow-xl relative">
+                    <div class="flex items-center justify-between pb-3 sm:pb-4 mb-4 sm:mb-6 border-b border-white/10">
+                        <h3 class="font-heading font-bold text-base sm:text-lg text-brand-sand">بعد المعسكر</h3>
+                        <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-green/20 text-brand-green">بعد 3 أسابيع</span>
+                    </div>
+                    <ul class="space-y-3 sm:space-y-4 text-xs sm:text-sm text-white/90">
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-brand-green font-bold shrink-0">✓</span>
+                            <span>تعرف أي أداة تستخدم لأي مهمة بدون تردد أو حيرة.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-brand-green font-bold shrink-0">✓</span>
+                            <span>أوامر احترافية تطلّع نتيجة دقيقة وموثوقة من أول مرة.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-brand-green font-bold shrink-0">✓</span>
+                            <span>مساعدين مخصصين ومسارات مؤتمتة تشتغل عنك تلقائيًا.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="text-brand-green font-bold shrink-0">✓</span>
+                            <span>تقارير وعروض تنفيذية جاهزة ومتقنة في جلسة وحدة.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 10. AUDIENCE (لمن المعسكر) ==================== -->
+    <section class="py-14 sm:py-20 bg-white border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+                <span class="text-xs font-bold text-brand-sand-dark tracking-wide uppercase block mb-1">لمن هذا المعسكر؟</span>
+                <h2 class="text-2xl sm:text-4xl font-heading font-black text-brand-dark mb-3">
+                    هل المعسكر يناسبك؟
+                </h2>
+                <p class="text-brand-muted text-xs sm:text-base">
+                    لكل شخص يبي الذكاء الاصطناعي يشتغل معه في شغله اليومي.
+                </p>
+            </div>
+
+            <!-- Personas 2x2 Grid on Mobile, 4-col on Desktop -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-8 sm:mb-12">
+
+                <div class="p-4 sm:p-6 rounded-3xl bg-brand-cream/60 border border-brand-border">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-dark text-brand-sand flex items-center justify-center font-bold text-sm sm:text-base mb-3">
+                        💼
+                    </div>
+                    <h3 class="font-heading font-bold text-sm sm:text-lg text-brand-dark mb-1 sm:mb-2">الموظف</h3>
+                    <p class="text-[11px] sm:text-xs text-brand-muted leading-relaxed">
+                        تبي تنجز شغلك أسرع وبجودة أعلى وتوفّر ساعات من وقتك.
+                    </p>
+                </div>
+
+                <div class="p-4 sm:p-6 rounded-3xl bg-brand-cream/60 border border-brand-border">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-dark text-brand-sand flex items-center justify-center font-bold text-sm sm:text-base mb-3">
+                        👥
+                    </div>
+                    <h3 class="font-heading font-bold text-sm sm:text-lg text-brand-dark mb-1 sm:mb-2">مدير الفريق</h3>
+                    <p class="text-[11px] sm:text-xs text-brand-muted leading-relaxed">
+                        ترفع إنتاجية فريقك وتوحّد طريقة شغلهم ببيئة ذكية.
+                    </p>
+                </div>
+
+                <div class="p-4 sm:p-6 rounded-3xl bg-brand-cream/60 border border-brand-border">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-dark text-brand-sand flex items-center justify-center font-bold text-sm sm:text-base mb-3">
+                        🚀
+                    </div>
+                    <h3 class="font-heading font-bold text-sm sm:text-lg text-brand-dark mb-1 sm:mb-2">صاحب المشروع</h3>
+                    <p class="text-[11px] sm:text-xs text-brand-muted leading-relaxed">
+                        تسوي كل شي بنفسك وتبي أحد يشيل عنك المهام الروتينية.
+                    </p>
+                </div>
+
+                <div class="p-4 sm:p-6 rounded-3xl bg-brand-cream/60 border border-brand-border">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-dark text-brand-sand flex items-center justify-center font-bold text-sm sm:text-base mb-3">
+                        🎯
+                    </div>
+                    <h3 class="font-heading font-bold text-sm sm:text-lg text-brand-dark mb-1 sm:mb-2">الباحث عن عمل</h3>
+                    <p class="text-[11px] sm:text-xs text-brand-muted leading-relaxed">
+                        مهارة عملية مطلوبة تميّزك عن غيرك من المتقدمين.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Not For Notice -->
+            <div class="max-w-2xl mx-auto p-4 sm:p-5 rounded-2xl bg-amber-50 border border-amber-200 text-center">
+                <span class="font-heading font-bold text-xs sm:text-sm text-amber-900 block mb-1">ما يناسبك إذا…</span>
+                <p class="text-[11px] sm:text-xs text-amber-800 leading-relaxed">
+                    تبي تتعلم برمجة النماذج وبناءها تقنيًا. المعسكر تطبيقي للاستخدام في الشغل، مو للمبرمجين المتخصصين.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 11. SCHEDULE (الجدول) ==================== -->
+    <section id="schedule" class="py-14 sm:py-20 bg-brand-cream border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-16">
+                <div class="text-right max-w-2xl">
+                    <span class="text-xs font-bold text-brand-sand-dark tracking-wide uppercase block mb-1">الجدول</span>
+                    <h2 class="text-2xl sm:text-4xl font-heading font-black text-brand-dark mb-2">
+                        جدول المعسكر
+                    </h2>
+                    <p class="text-brand-muted text-xs sm:text-base">
+                        السبت والاثنين والأربعاء، من 6 إلى 10 مساءً
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs font-semibold">
+                    <span class="px-3 py-1.5 rounded-xl bg-white border border-brand-border text-brand-dark">3 أسابيع</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-white border border-brand-border text-brand-dark">9 لقاءات</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-white border border-brand-border text-brand-dark">4 ساعات/لقاء</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-brand-dark text-brand-sand">36 ساعة تدريبية</span>
+                </div>
+            </div>
+
+            <!-- Schedule Columns (Stacked on Mobile, 3-col on Desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+
+                <!-- Week 1 -->
+                <div class="bg-white rounded-3xl p-5 sm:p-6 border border-brand-border space-y-3.5">
+                    <div class="pb-3 border-b border-brand-border flex items-center justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-brand-sand-dark block">الأسبوع الأول</span>
+                            <h3 class="font-heading font-bold text-sm sm:text-base text-brand-dark">المدخل والتوجيه، والإنتاج</h3>
+                        </div>
+                        <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-brand-cream text-brand-muted">3 لقاءات</span>
+                    </div>
+
+                    <div class="p-3 rounded-2xl bg-brand-cream/60 border border-brand-border/60">
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="font-bold text-brand-dark">السبت</span>
+                            <span class="text-brand-muted text-[11px]">المحور 01–02 · 6 – 10 م</span>
+                        </div>
+                        <p class="text-xs font-medium text-brand-charcoal mt-0.5">المدخل والتوجيه الاحترافي</p>
+                    </div>
+
+                    <div class="p-3 rounded-2xl bg-brand-cream/60 border border-brand-border/60">
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="font-bold text-brand-dark">الاثنين</span>
+                            <span class="text-brand-muted text-[11px]">المحور 03 · 6 – 10 م</span>
+                        </div>
+                        <p class="text-xs font-medium text-brand-charcoal mt-0.5">الصور والفيديو</p>
+                    </div>
+
+                    <div class="p-3 rounded-2xl bg-brand-cream/60 border border-brand-border/60">
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="font-bold text-brand-dark">الأربعاء</span>
+                            <span class="text-brand-muted text-[11px]">المحور 04 · 6 – 10 م</span>
+                        </div>
+                        <p class="text-xs font-medium text-brand-charcoal mt-0.5">العروض والتقارير المرئية</p>
+                    </div>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="bg-white rounded-3xl p-5 sm:p-6 border border-brand-border space-y-3.5">
+                    <div class="pb-3 border-b border-brand-border flex items-center justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-brand-sand-dark block">الأسبوع الثاني</span>
+                            <h3 class="font-heading font-bold text-sm sm:text-base text-brand-dark">التخصيص والتحليل</h3>
+                        </div>
+                        <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-brand-cream text-brand-muted">3 لقاءات</span>
+                    </div>
+
+                    <div class="p-3 rounded-2xl bg-brand-cream/60 border border-brand-border/60">
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="font-bold text-brand-dark">السبت</span>
+                            <span class="text-brand-muted text-[11px]">المحور 05 · 6 – 10 م</span>
+                        </div>
+                        <p class="text-xs font-medium text-brand-charcoal mt-0.5">المساعد الذكي المخصص</p>
+                    </div>
+
+                    <div class="p-3 rounded-2xl bg-brand-cream/60 border border-brand-border/60">
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="font-bold text-brand-dark">الاثنين</span>
+                            <span class="text-brand-muted text-[11px]">المحور 06 · 6 – 10 م</span>
+                        </div>
+                        <p class="text-xs font-medium text-brand-charcoal mt-0.5">تحليل البيانات</p>
+                    </div>
+
+                    <div class="p-3 rounded-2xl bg-brand-cream/60 border border-brand-border/60">
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="font-bold text-brand-dark">الأربعاء</span>
+                            <span class="text-brand-muted text-[11px]">المحور 07 · 6 – 10 م</span>
+                        </div>
+                        <p class="text-xs font-medium text-brand-charcoal mt-0.5">أتمتة المهام</p>
+                    </div>
+                </div>
+
+                <!-- Week 3 -->
+                <div class="bg-brand-dark text-white rounded-3xl p-5 sm:p-6 border border-brand-darker space-y-3.5 shadow-xl">
+                    <div class="pb-3 border-b border-white/10 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-brand-sand block">الأسبوع الثالث</span>
+                            <h3 class="font-heading font-bold text-sm sm:text-base text-white">الأتمتة ومشروع التخرج</h3>
+                        </div>
+                        <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-white/10 text-brand-sand">الختام</span>
+                    </div>
+
+                    <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="font-bold text-brand-sand">السبت</span>
+                            <span class="text-white/60 text-[11px]">المحور 07 · 6 – 10 م</span>
+                        </div>
+                        <p class="text-xs font-medium text-white/90 mt-0.5">أتمتة المهام المتقدمة</p>
+                    </div>
+
+                    <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="font-bold text-brand-sand">الاثنين</span>
+                            <span class="text-white/60 text-[11px]">المحور 08 · 6 – 10 م</span>
+                        </div>
+                        <p class="text-xs font-medium text-white/90 mt-0.5">مشروع التخرج: السكرتير الافتراضي</p>
+                    </div>
+
+                    <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="font-bold text-brand-sand">الأربعاء</span>
+                            <span class="text-white/60 text-[11px]">المحور 08 · 6 – 10 م</span>
+                        </div>
+                        <p class="text-xs font-medium text-white/90 mt-0.5">مراجعة المشاريع وتسليم الشهادات</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 12. PRICING & REGISTRATION (التسجيل) ==================== -->
+    <section id="pricing" class="py-16 sm:py-24 bg-white border-t border-brand-border relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 sm:w-[600px] h-96 sm:h-[600px] bg-brand-sand/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+                <span class="text-xs font-bold text-brand-sand-dark tracking-wide uppercase block mb-1">التسجيل</span>
+                <h2 class="text-2xl sm:text-5xl font-heading font-black text-brand-dark mb-3">
+                    احجز مقعدك في الدفعة القادمة
+                </h2>
+                <p class="text-brand-muted text-xs sm:text-lg">
+                    كل اللي تحتاجه عشان تخلي الذكاء الاصطناعي يشتغل عنك، في باقة وحدة.
+                </p>
+            </div>
+
+            <!-- Pricing Card Container -->
+            <div class="max-w-2xl mx-auto bg-brand-dark text-white rounded-3xl p-6 sm:p-12 border border-brand-darker shadow-2xl relative">
+
+                <!-- Top Badge & Discount -->
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-5 sm:pb-6 border-b border-white/10">
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-sand text-brand-dark text-xs font-bold">
+                        <svg class="w-3.5 h-3.5 text-brand-sand-dark" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.37-.489-.745-1.08-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.12z" clip-rule="evenodd"/></svg>
+                        <span>خصم الإطلاق</span>
+                    </div>
+                    <div class="text-left">
+                        <span class="text-xs text-white/50 line-through block">2,400 ر.س</span>
+                        <div class="flex items-baseline gap-1">
+                            <span class="font-heading font-black text-3xl sm:text-4xl text-brand-sand">1,450</span>
+                            <span class="text-xs text-white/70">ر.س فقط</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Countdown Timer -->
+                <div class="py-5 sm:py-6 border-b border-white/10">
+                    <span class="text-xs text-white/60 block text-center mb-3">ينتهي خصم الإطلاق خلال:</span>
+                    <div class="grid grid-cols-4 gap-2 sm:gap-4 max-w-md mx-auto text-center">
+                        <div class="bg-white/5 p-2 sm:p-3 rounded-2xl border border-white/10">
+                            <span id="days" class="font-heading font-bold text-lg sm:text-2xl text-brand-sand block">03</span>
+                            <span class="text-[10px] text-white/60">يوم</span>
+                        </div>
+                        <div class="bg-white/5 p-2 sm:p-3 rounded-2xl border border-white/10">
+                            <span id="hours" class="font-heading font-bold text-lg sm:text-2xl text-brand-sand block">14</span>
+                            <span class="text-[10px] text-white/60">ساعة</span>
+                        </div>
+                        <div class="bg-white/5 p-2 sm:p-3 rounded-2xl border border-white/10">
+                            <span id="minutes" class="font-heading font-bold text-lg sm:text-2xl text-brand-sand block">22</span>
+                            <span class="text-[10px] text-white/60">دقيقة</span>
+                        </div>
+                        <div class="bg-white/5 p-2 sm:p-3 rounded-2xl border border-white/10">
+                            <span id="seconds" class="font-heading font-bold text-lg sm:text-2xl text-brand-green block">08</span>
+                            <span class="text-[10px] text-white/60">ثانية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seats Progress Bar -->
+                <div class="py-4 sm:py-6 border-b border-white/10 space-y-2">
+                    <div class="flex items-center justify-between text-xs">
+                        <span class="text-white/80 font-medium">المقاعد المحجوزة</span>
+                        <span class="text-brand-sand font-bold">68% من المقاعد محجوزة</span>
+                    </div>
+                    <div class="w-full bg-white/10 h-2 sm:h-2.5 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-l from-brand-sand to-brand-green h-full rounded-full" style="width: 68%;"></div>
+                    </div>
+                </div>
+
+                <!-- Features Included List -->
+                <div class="py-5 sm:py-6 space-y-3 text-xs sm:text-sm text-white/90">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center shrink-0 text-xs font-bold">✓</span>
+                        <span>9 لقاءات مباشرة وتفاعلية مع المدرب (36 ساعة تدريبية).</span>
+                    </div>
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center shrink-0 text-xs font-bold">✓</span>
+                        <span>تسجيلات كاملة لكل الجلسات ترجع لها متى ما تبي.</span>
+                    </div>
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center shrink-0 text-xs font-bold">✓</span>
+                        <span>قوالب وملفات جاهزة تستلمها مع كل محور تطبيقي.</span>
+                    </div>
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center shrink-0 text-xs font-bold">✓</span>
+                        <span>مراجعة المدرب لتطبيقاتك العملية ومجتمع تسأل فيه.</span>
+                    </div>
+                </div>
+
+                <!-- Trust Badges (Figma mobile chips) -->
+                <div class="flex flex-wrap items-center justify-center gap-2 pb-5 text-xs text-white/70">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10">
+            🔒 <span>دفع آمن</span>
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10">
+            🎓 <span>شهادة إتمام</span>
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10">
+            💬 <span>دعم مستمر</span>
+                    </span>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="space-y-2.5">
+                    <button onclick="openModal('enrollModal')" class="w-full py-3.5 sm:py-4 rounded-xl bg-brand-sand text-brand-dark hover:bg-white font-bold text-sm sm:text-base shadow-xl transition-all flex items-center justify-center gap-2">
+            <span>احجز مقعدك الآن</span>
+            <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+                    <button onclick="openModal('contactModal')" class="w-full py-3 sm:py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2">
+            <svg class="w-4 h-4 text-brand-sand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            <span>اسأل مستشار التدريب عبر واتساب</span>
+          </button>
+                </div>
+
+                <p class="text-center text-[11px] text-white/50 pt-3">
+                    بعد الدفع توصلك تفاصيل الدخول وجدول اللقاءات مباشرة.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 13. FAQ (الأسئلة الشائعة) ==================== -->
+    <section id="faq" class="py-14 sm:py-20 bg-brand-cream border-t border-brand-border">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-10 sm:mb-14">
+                <span class="text-xs font-bold text-brand-sand-dark tracking-wide uppercase block mb-1">الأسئلة الشائعة</span>
+                <h2 class="text-2xl sm:text-4xl font-heading font-black text-brand-dark mb-2">
+                    عندك سؤال؟
+                </h2>
+                <p class="text-brand-muted text-xs sm:text-base">
+                    جمعنا لك أكثر الأسئلة اللي توصلنا. وإذا ما لقيت جوابك، كلمنا مباشرة.
+                </p>
+            </div>
+
+            <!-- Accordion List -->
+            <div class="space-y-3 sm:space-y-4">
+
+                <!-- FAQ 1 (Open by default) -->
+                <div class="bg-white rounded-2xl border border-brand-border overflow-hidden transition-all">
+                    <button onclick="toggleFaq(1)" class="w-full p-4 sm:p-5 text-right flex items-center justify-between gap-3 font-heading font-bold text-brand-dark text-sm sm:text-base">
+            <span>أحتاج خبرة تقنية أو برمجة؟</span>
+            <span id="faq-icon-1" class="w-5 h-5 rounded-full bg-brand-cream flex items-center justify-center text-brand-muted text-xs transform transition-transform rotate-180">▼</span>
+          </button>
+                    <div id="faq-content-1" class="px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-brand-muted leading-relaxed">
+                        لا. كل المحاور بدون برمجة، ونبدأ من الصفر. إذا تعرف تستخدم البريد والمتصفح، أنت جاهز.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl border border-brand-border overflow-hidden transition-all">
+                    <button onclick="toggleFaq(2)" class="w-full p-4 sm:p-5 text-right flex items-center justify-between gap-3 font-heading font-bold text-brand-dark text-sm sm:text-base">
+            <span>ما عمري استخدمت الذكاء الاصطناعي، يناسبني؟</span>
+            <span id="faq-icon-2" class="w-5 h-5 rounded-full bg-brand-cream flex items-center justify-center text-brand-muted text-xs transform transition-transform">▼</span>
+          </button>
+                    <div id="faq-content-2" class="hidden px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-brand-muted leading-relaxed">
+                        نعم بالتأكيد. نبدأ معك من الأساس خطوة بخطوة حتى تصبح قادراً على بناء أنظمة متقدمة بدون أي تعقيد.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl border border-brand-border overflow-hidden transition-all">
+                    <button onclick="toggleFaq(3)" class="w-full p-4 sm:p-5 text-right flex items-center justify-between gap-3 font-heading font-bold text-brand-dark text-sm sm:text-base">
+            <span>إذا فاتتني جلسة مباشرة؟</span>
+            <span id="faq-icon-3" class="w-5 h-5 rounded-full bg-brand-cream flex items-center justify-center text-brand-muted text-xs transform transition-transform">▼</span>
+          </button>
+                    <div id="faq-content-3" class="hidden px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-brand-muted leading-relaxed">
+                        كل الجلسات مسجّلة وتُرفع مباشرة بعد البث مع ملفات التطبيق وقوالب التمارين لتراجعها في أي وقت.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl border border-brand-border overflow-hidden transition-all">
+                    <button onclick="toggleFaq(4)" class="w-full p-4 sm:p-5 text-right flex items-center justify-between gap-3 font-heading font-bold text-brand-dark text-sm sm:text-base">
+            <span>كيف يكون التطبيق؟</span>
+            <span id="faq-icon-4" class="w-5 h-5 rounded-full bg-brand-cream flex items-center justify-center text-brand-muted text-xs transform transition-transform">▼</span>
+          </button>
+                    <div id="faq-content-4" class="hidden px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-brand-muted leading-relaxed">
+                        تطبيق مباشر حي مع المدرب خطوة بخطوة، ثم مهام حقيقية تطبقها على شغلك بين اللقاءات ويراجعها معك.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-2xl border border-brand-border overflow-hidden transition-all">
+                    <button onclick="toggleFaq(5)" class="w-full p-4 sm:p-5 text-right flex items-center justify-between gap-3 font-heading font-bold text-brand-dark text-sm sm:text-base">
+            <span>وش يصير بعد الدفع؟</span>
+            <span id="faq-icon-5" class="w-5 h-5 rounded-full bg-brand-cream flex items-center justify-center text-brand-muted text-xs transform transition-transform">▼</span>
+          </button>
+                    <div id="faq-content-5" class="hidden px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-brand-muted leading-relaxed">
+                        توصلك تفاصيل الدخول للمنصة ومجموعة المجتمع التفاعلي وجدول المواعيد مباشرة عبر الإيميل والواتساب.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FAQ CTA Buttons -->
+            <div class="mt-8 sm:mt-10 text-center flex flex-wrap items-center justify-center gap-3">
+                <button onclick="openModal('contactModal')" class="px-5 py-2.5 rounded-xl bg-white border border-brand-border text-brand-dark font-semibold text-xs sm:text-sm hover:bg-brand-sand-light transition-all">
+          اسألنا مباشرة
+        </button>
+                <a href="#pricing" class="px-5 py-2.5 rounded-xl bg-brand-dark text-brand-sand font-semibold text-xs sm:text-sm hover:bg-brand-darker transition-all">
+          احجز مقعدك
+        </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 14. FINAL CTA ==================== -->
+    <section class="py-16 sm:py-20 bg-brand-dark text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+
+            <!-- Progress Bar Pills -->
+            <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-1 rounded-full bg-white/10 text-brand-sand text-[11px] sm:text-xs font-semibold mb-5">
+                <span>تأسّس</span>
+                <span>←</span>
+                <span>تنتج</span>
+                <span>←</span>
+                <span>تخصّص</span>
+                <span>←</span>
+                <span class="text-white font-bold">تؤتمت</span>
+            </div>
+
+            <h2 class="text-2xl sm:text-5xl font-heading font-black mb-4 sm:mb-6 leading-tight max-w-3xl mx-auto">
+                شغلك بعد المعسكر
+                <span class="text-brand-sand block">غير شغلك قبله</span>
+            </h2>
+
+            <p class="text-white/80 text-xs sm:text-lg max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+                8 محاور، وكل محور تطلع منه بشيء جاهز. الباقي عليك تحجز.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto">
+                <a href="#pricing" class="w-full sm:w-auto px-8 py-3.5 sm:py-4 rounded-xl bg-brand-sand text-brand-dark hover:bg-white font-bold text-sm sm:text-base shadow-2xl transition-all">
+          احجز مقعدك الآن
+        </a>
+                <a href="#curriculum" class="w-full sm:w-auto px-7 py-3.5 sm:py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white font-semibold text-sm sm:text-base transition-all">
+          راجع المحاور
+        </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 15. FOOTER ==================== -->
+    <footer class="bg-brand-darker text-white/70 text-xs sm:text-sm border-t border-white/10 pt-12 sm:pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-white/10">
+
+                <div class="lg:col-span-2 space-y-3">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-8 h-8 rounded-xl bg-brand-sand text-brand-dark font-heading font-black text-base flex items-center justify-center">
+                            مِ
+                        </div>
+                        <span class="font-heading font-bold text-lg text-white">مِران</span>
+                    </div>
+                    <p class="text-xs text-white/70 leading-relaxed max-w-sm">
+                        معسكر الذكاء الاصطناعي التطبيقي لبيئة العمل. نعلّمك تخلي الذكاء الاصطناعي يشتغل عنك.
+                    </p>
+                    <div class="text-[11px] text-brand-sand font-medium">
+                        صُنع للعمل الذكي · الرياض، المملكة العربية السعودية
+                    </div>
+                </div>
+
+                <div class="space-y-2.5">
+                    <h4 class="font-heading font-bold text-xs sm:text-sm text-white">المعسكر</h4>
+                    <ul class="space-y-1.5 text-xs">
+                        <li><a href="#about" class="hover:text-white transition-colors">عن المعسكر</a></li>
+                        <li><a href="#curriculum" class="hover:text-white transition-colors">المحاور التدريبية</a></li>
+                        <li><a href="#schedule" class="hover:text-white transition-colors">الجدول</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors">التسجيل</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-2.5">
+                    <h4 class="font-heading font-bold text-xs sm:text-sm text-white">الدعم</h4>
+                    <ul class="space-y-1.5 text-xs">
+                        <li><a href="#faq" class="hover:text-white transition-colors">الأسئلة الشائعة</a></li>
+                        <li><a href="#" onclick="alert('ضمان استرجاع كامل الرسوم قبل الجلسة الثانية في حال عدم الرضا.')" class="hover:text-white transition-colors">سياسة الاسترجاع</a></li>
+                        <li><a href="#" onclick="alert('نحافظ على سرية بياناتك وملفاتك تمامًا.')" class="hover:text-white transition-colors">سياسة الخصوصية</a></li>
+                        <li><a href="https://wa.me/966500000000" target="_blank" class="hover:text-white transition-colors">تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-2.5">
+                    <h4 class="font-heading font-bold text-xs sm:text-sm text-white">خلك أول من يعرف</h4>
+                    <p class="text-[11px] text-white/60">
+                        نرسل لك موعد الدفعة القادمة ومعسكرات مِران الجديدة.
+                    </p>
+                    <form onsubmit="event.preventDefault(); alert('شكراً لاشتراكك!');" class="space-y-2">
+                        <input type="email" required placeholder="بريدك الإلكتروني" class="w-full px-3 py-2 rounded-xl bg-white/5 border border-white/10 text-xs text-white placeholder-white/40 focus:outline-none focus:border-brand-sand">
+                        <button type="submit" class="w-full py-2 rounded-xl bg-brand-sand text-brand-dark font-bold text-xs hover:bg-white transition-colors">
+              اشترك
+            </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-white/50">
+                <div>
+                    © 2026 مِران (Miran). جميع الحقوق محفوظة.
+                </div>
+                <div class="flex items-center gap-4">
+                    <span>info@themiran.com</span>
+                    <span>+966 50 000 0000</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ==================== 16. MOBILE STICKY BOOKING BAR (FIGMA MOBILE) ==================== -->
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-brand-dark/95 backdrop-blur-md border-t border-white/10 px-4 py-3 shadow-[0_-8px_25px_rgba(0,0,0,0.3)] flex items-center justify-between gap-3">
+        <div>
+            <div class="flex items-baseline gap-1 text-white">
+                <span class="font-heading font-black text-lg text-brand-sand">1,450</span>
+                <span class="text-[10px] text-white/70">ر.س</span>
+                <span class="text-[10px] text-white/40 line-through mr-1">2,400</span>
+            </div>
+            <div class="text-[10px] text-brand-green font-medium">
+                68% من المقاعد محجوزة
+            </div>
+        </div>
+        <a href="#pricing" class="px-5 py-2.5 rounded-xl bg-brand-sand text-brand-dark font-heading font-bold text-xs shadow-md inline-flex items-center gap-1.5 active:scale-95 transition-all">
+            <span>احجز مقعدك</span>
+            <svg class="w-3.5 h-3.5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+    </div>
+
+    <!-- ==================== CONTACT MODAL ==================== -->
+    <div id="contactModal" class="fixed inset-0 z-50 hidden bg-brand-darker/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-6 sm:p-7 max-w-md w-full shadow-2xl border border-brand-border text-right relative">
+            <button onclick="closeModal('contactModal')" class="absolute top-4 left-4 text-brand-muted hover:text-brand-dark">
+        ✕
+      </button>
+            <div class="w-10 h-10 rounded-2xl bg-brand-sand-light text-brand-sand-dark flex items-center justify-center mb-3">
+                💬
+            </div>
+            <h3 class="font-heading font-bold text-lg sm:text-xl text-brand-dark mb-1">تواصل مع مستشار التدريب</h3>
+            <p class="text-xs text-brand-muted mb-4 leading-relaxed">
+                عندك استفسار عن محاور المعسكر أو مدى مناسبته لشغلك؟ فريقنا جاهز لمساعدتك.
+            </p>
+
+            <form onsubmit="event.preventDefault(); alert('شكراً لتواصلك! سيقوم مستشار التدريب بالتواصل معك خلال دقائق.'); closeModal('contactModal');" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-semibold text-brand-dark mb-1">الاسم الكريم</label>
+                    <input type="text" required placeholder="مثال: محمد العمري" class="w-full px-3.5 py-2 rounded-xl bg-brand-cream border border-brand-border text-xs sm:text-sm text-brand-dark focus:outline-none focus:border-brand-sand">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-brand-dark mb-1">رقم الجوال (واتساب)</label>
+                    <input type="tel" required placeholder="05XXXXXXXX" class="w-full px-3.5 py-2 rounded-xl bg-brand-cream border border-brand-border text-xs sm:text-sm text-brand-dark focus:outline-none focus:border-brand-sand text-left" dir="ltr">
+                </div>
+                <button type="submit" class="w-full py-3 rounded-xl bg-brand-dark text-brand-sand hover:bg-brand-darker font-bold text-xs sm:text-sm shadow-md transition-all mt-2">
+          إرسال وتواصل عبر واتساب
+        </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== ENROLL MODAL ==================== -->
+    <div id="enrollModal" class="fixed inset-0 z-50 hidden bg-brand-darker/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-6 sm:p-7 max-w-md w-full shadow-2xl border border-brand-border text-right relative">
+            <button onclick="closeModal('enrollModal')" class="absolute top-4 left-4 text-brand-muted hover:text-brand-dark">
+        ✕
+      </button>
+            <div class="w-10 h-10 rounded-2xl bg-brand-sand text-brand-dark flex items-center justify-center mb-3 font-bold text-base">
+                🎓
+            </div>
+            <h3 class="font-heading font-bold text-lg sm:text-xl text-brand-dark mb-1">حجز مقعد في معسكر مِران</h3>
+            <div class="text-xs text-brand-green font-semibold mb-3">خصم الإطلاق مفعّل: 1,450 ر.س (بدلاً من 2,400 ر.س)</div>
+
+            <form onsubmit="event.preventDefault(); alert('تم استلام طلب حجزك بنجاح! يتم نقلك الآن لبوابة الدفع الآمن...'); closeModal('enrollModal');" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-semibold text-brand-dark mb-1">الاسم الكامل</label>
+                    <input type="text" required placeholder="اسمك الثلاثي لإصدار الشهادة" class="w-full px-3.5 py-2 rounded-xl bg-brand-cream border border-brand-border text-xs sm:text-sm text-brand-dark focus:outline-none focus:border-brand-sand">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-brand-dark mb-1">البريد الإلكتروني</label>
+                    <input type="email" required placeholder="لتصلك تفاصيل الدخول" class="w-full px-3.5 py-2 rounded-xl bg-brand-cream border border-brand-border text-xs sm:text-sm text-brand-dark focus:outline-none focus:border-brand-sand" dir="ltr">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-brand-dark mb-1">رقم الجوال</label>
+                    <input type="tel" required placeholder="05XXXXXXXX" class="w-full px-3.5 py-2 rounded-xl bg-brand-cream border border-brand-border text-xs sm:text-sm text-brand-dark focus:outline-none focus:border-brand-sand text-left" dir="ltr">
+                </div>
+                <button type="submit" class="w-full py-3 rounded-xl bg-brand-dark text-brand-sand hover:bg-brand-darker font-bold text-xs sm:text-sm shadow-md transition-all mt-2">
+          المتابعة إلى الدفع الآمن (1,450 ر.س)
+        </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        // 1. Mobile Menu Drawer Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // 2. Week Switcher Tabs
+        function switchWeek(weekNum) {
+            [1, 2, 3].forEach(w => {
+                const content = document.getElementById(`week-${w}-content`);
+                const tab = document.getElementById(`tab-week-${w}`);
+                if (w === weekNum) {
+                    content.classList.remove('hidden');
+                    tab.classList.add('bg-brand-dark', 'text-brand-sand');
+                    tab.classList.remove('text-brand-muted');
+                } else {
+                    content.classList.add('hidden');
+                    tab.classList.remove('bg-brand-dark', 'text-brand-sand');
+                    tab.classList.add('text-brand-muted');
+                }
+            });
+        }
+
+        // 3. FAQ Accordion Toggle
+        function toggleFaq(num) {
+            const content = document.getElementById(`faq-content-${num}`);
+            const icon = document.getElementById(`faq-icon-${num}`);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // 4. Countdown Timer Simulator
+        let timeLeft = {
+            days: 3,
+            hours: 14,
+            minutes: 22,
+            seconds: 8
+        };
+
+        setInterval(() => {
+            if (timeLeft.seconds > 0) {
+                timeLeft.seconds--;
+            } else {
+                timeLeft.seconds = 59;
+                if (timeLeft.minutes > 0) {
+                    timeLeft.minutes--;
+                } else {
+                    timeLeft.minutes = 59;
+                    if (timeLeft.hours > 0) {
+                        timeLeft.hours--;
+                    } else {
+                        timeLeft.hours = 23;
+                        if (timeLeft.days > 0) {
+                            timeLeft.days--;
+                        }
+                    }
+                }
+            }
+            document.getElementById('days').textContent = String(timeLeft.days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(timeLeft.hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(timeLeft.minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(timeLeft.seconds).padStart(2, '0');
+        }, 1000);
+
+        // 5. Modal Handlers
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+    </script>
+
+</body>
+
+</html>

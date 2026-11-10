@@ -1,0 +1,672 @@
+/* =============================================
+   Miran admin theme
+   Palettes (primary, gray, status) come from AdminPanelProvider::colors().
+   This file only adds surface tokens and component styling on top of them,
+   and never redefines Filament's --primary-* / --gray-* variables.
+   Direction-neutral: logical properties only, so ar (rtl) and en (ltr) match.
+   ============================================= */
+
+/* IBM Plex Sans Arabic (body) is loaded by the panel's ->font(); this adds the display face. */
+@import "https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&display=swap";
+@import "../../../../vendor/filament/filament/resources/css/theme.css";
+@import "../../../../vendor/leek/filament-header-filters/resources/dist/filament-header-filters.css";
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+@source '../../../../resources/views/components/admin/**/*';
+@source '../../../../vendor/diogogpinto/filament-auth-ui-enhancer/resources/**/*.blade.php';
+@source '../../../../vendor/gboquizosanchez/filament-log-viewer/resources/views/**/*.blade.php';
+
+:root {
+    --mr-font-display: "Alexandria", "IBM Plex Sans Arabic", "Segoe UI", sans-serif;
+
+    --mr-bg: var(--gray-100);
+    --mr-surface: #ffffff;
+    --mr-surface-2: #f4f2ef;
+    --mr-line: #e2ded8;
+    --mr-ink: #22302d;
+    --mr-muted: var(--gray-500);
+
+    --mr-brand: var(--primary-600);
+    --mr-brand-ink: var(--primary-700);
+    --mr-brand-soft: var(--primary-100);
+
+    --mr-on-dark: #ffffff;
+    --mr-side: var(--gray-800);
+    --mr-side-ink: #e8e3dd;
+    --mr-side-muted: var(--gray-400);
+    --mr-side-active: var(--gray-700);
+    --mr-side-line: rgb(255 255 255 / 0.07);
+
+    --mr-radius-l: 16px;
+    --mr-radius-m: 12px;
+    --mr-radius-s: 8px;
+
+    --mr-shadow: 0 1px 2px rgb(34 48 45 / 0.04), 0 6px 18px rgb(34 48 45 / 0.04);
+    --mr-shadow-pop: 0 14px 40px rgb(0 0 0 / 0.16);
+}
+
+.dark {
+    --mr-bg: var(--gray-950);
+    --mr-surface: var(--gray-900);
+    --mr-surface-2: #212a28;
+    --mr-line: #323d3a;
+    --mr-ink: #ece7e1;
+    --mr-muted: var(--gray-400);
+
+    --mr-brand: var(--primary-400);
+    --mr-brand-ink: var(--primary-300);
+    --mr-brand-soft: #3a2e26;
+
+    --mr-side: #0f1514;
+    --mr-side-muted: #8e9895;
+    --mr-side-active: #26302e;
+
+    --mr-shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 6px 18px rgb(0 0 0 / 0.25);
+    --mr-shadow-pop: 0 14px 40px rgb(0 0 0 / 0.5);
+}
+
+/* ── Base ─────────────────────────────────────── */
+
+.fi-body {
+    background: var(--mr-bg);
+    color: var(--mr-ink);
+    -webkit-font-smoothing: antialiased;
+}
+
+.fi-header-heading,
+.fi-report-totals-value,
+.fi-section-header-heading,
+.fi-modal-heading,
+.fi-wi-stats-overview-stat-value,
+.fi-simple-header-heading {
+    font-family: var(--mr-font-display);
+    letter-spacing: 0;
+}
+
+.fi-header-heading::before {
+    content: "◆";
+    color: var(--mr-brand);
+    font-size: 0.55em;
+    margin-inline-end: 0.6rem;
+    vertical-align: middle;
+}
+
+.fi-wi-stats-overview-stat-value,
+.fi-ta-text-item,
+.fi-pagination {
+    font-variant-numeric: tabular-nums;
+}
+
+.fi-body :focus-visible {
+    outline: 2px solid var(--mr-brand);
+    outline-offset: 2px;
+}
+
+/* ── Sidebar (dark in both schemes) ───────────── */
+
+.fi-sidebar {
+    background: var(--mr-side);
+    border-inline-end: 1px solid var(--mr-side-line);
+    color: var(--mr-side-ink);
+}
+
+.fi-sidebar-header {
+    background: transparent;
+    border-block-end: 1px solid var(--mr-side-line);
+    box-shadow: none;
+    --tw-ring-shadow: 0 0 #0000;
+}
+
+.fi-sidebar > * {
+    position: relative;
+    z-index: 1;
+}
+
+.fi-sidebar-wave {
+    position: absolute;
+    top: -140px;
+    inset-inline-start: -180px;
+    width: 560px;
+    height: 1300px;
+    pointer-events: none;
+    opacity: 0.07;
+    z-index: 0;
+}
+
+.fi-sidebar-wave svg {
+    width: 100%;
+    height: 100%;
+}
+
+.fi-sidebar-wave path {
+    fill: var(--primary-400);
+}
+
+.fi-sidebar-wave .wave-2 {
+    fill: var(--mr-side);
+    opacity: 0.6;
+}
+
+.fi-sidebar-group-label,
+.fi-dd-group-label,
+.fi-dd-detail-title {
+    color: var(--mr-side-muted);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.fi-sidebar-group-btn .fi-icon,
+.fi-sidebar-group-collapse-btn .fi-icon {
+    color: var(--mr-side-muted);
+}
+
+.fi-sidebar-item-btn {
+    border-radius: var(--mr-radius-s);
+}
+
+.fi-sidebar-item-btn > .fi-icon,
+.fi-sidebar-item-icon {
+    color: var(--mr-side-muted);
+}
+
+.fi-sidebar-item-label,
+.fi-dd-btn-label {
+    color: var(--mr-side-ink);
+    font-weight: 400;
+}
+
+.fi-sidebar-item.fi-sidebar-item-has-url > .fi-sidebar-item-btn:hover,
+.fi-sidebar-item.fi-sidebar-item-has-url > .fi-sidebar-item-btn:focus-visible,
+.fi-dd-group-btn:hover,
+.fi-dd-group-btn:focus-visible,
+.fi-dd-back-btn:hover,
+.fi-dd-back-btn:focus-visible,
+.fi-sidebar-group-dropdown-trigger-btn:hover,
+.fi-sidebar-group-dropdown-trigger-btn:focus-visible {
+    background: rgb(255 255 255 / 0.05);
+    color: var(--mr-on-dark);
+}
+
+.fi-dd-back-btn,
+.fi-dd-back-btn .fi-icon {
+    color: var(--mr-side-ink);
+}
+
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn,
+.fi-dd-group-btn.fi-active {
+    background: var(--mr-side-active);
+    box-shadow: inset calc(-3px * var(--mr-dir, 1)) 0 0 var(--mr-brand);
+}
+
+[dir="ltr"] .fi-sidebar {
+    --mr-dir: -1;
+}
+
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn > .fi-sidebar-item-label,
+.fi-dd-group-btn.fi-active .fi-dd-btn-label,
+.fi-dd-group-btn:hover .fi-dd-btn-label,
+.fi-dd-detail-title:hover {
+    color: var(--mr-on-dark);
+    font-weight: 600;
+}
+
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn > .fi-icon {
+    color: var(--primary-300);
+}
+
+.fi-sidebar-item.fi-active
+    > .fi-sidebar-item-btn
+    > .fi-sidebar-item-grouped-border
+    > .fi-sidebar-item-grouped-border-part {
+    background: var(--primary-300);
+}
+
+.fi-sidebar-item-grouped-border-part-not-first,
+.fi-sidebar-item-grouped-border-part-not-last {
+    background: rgb(255 255 255 / 0.12);
+}
+
+.fi-sidebar-item-folder > .fi-sidebar-item-btn {
+    cursor: pointer;
+}
+
+.fi-sidebar-item-folder-chevron {
+    display: inline-flex;
+    transition: transform 0.2s ease;
+}
+
+.fi-sidebar-item-folder-chevron .fi-icon {
+    color: var(--mr-side-muted);
+}
+
+.fi-sidebar-item-folder.fi-collapsed .fi-sidebar-item-folder-chevron {
+    transform: rotate(-90deg);
+}
+
+[dir="rtl"] .fi-sidebar-item-folder.fi-collapsed .fi-sidebar-item-folder-chevron {
+    transform: rotate(90deg);
+}
+
+/* ── Topbar ───────────────────────────────────── */
+
+.fi-topbar > nav,
+.fi-topbar {
+    background: var(--mr-surface);
+    box-shadow: none;
+    border-block-end: 1px solid var(--mr-line);
+}
+
+/* ── Surfaces: sections, cards, widgets, tables ─ */
+
+.fi-section:not(.fi-section-not-contained):not(.fi-aside),
+.fi-wi-stats-overview-stat,
+.fi-report-filters,
+.fi-report-totals,
+.fi-ta-ctn {
+    background: var(--mr-surface);
+    border: 1px solid var(--mr-line);
+    border-radius: var(--mr-radius-l);
+    box-shadow: var(--mr-shadow);
+    --tw-ring-shadow: 0 0 #0000;
+}
+
+.fi-ta-ctn {
+    overflow: hidden;
+}
+
+.fi-section-content-ctn {
+    border-color: var(--mr-line);
+}
+
+.fi-section-header-heading::before {
+    content: "◆";
+    color: var(--mr-brand);
+    font-size: 0.7em;
+    margin-inline-end: 0.45rem;
+    vertical-align: middle;
+}
+
+.fi-report-totals-item {
+    border-color: var(--mr-line);
+}
+
+.fi-wi-stats-overview-stat-label {
+    color: var(--mr-muted);
+    font-size: 0.82rem;
+}
+
+/* ── KPI dashboard (CRM home) ─────────────────── */
+
+.fi-kpi-dashboard {
+    --kpi-up: var(--success-600);
+    --kpi-down: var(--danger-600);
+}
+
+.dark .fi-kpi-dashboard {
+    --kpi-up: var(--success-400);
+    --kpi-down: var(--danger-400);
+}
+
+.fi-kpi-dashboard .kpi-card,
+.fi-kpi-dashboard .fi-section {
+    background: var(--mr-surface);
+    border: 1px solid var(--mr-line);
+    border-radius: var(--mr-radius-l);
+    box-shadow: var(--mr-shadow);
+    color: var(--mr-ink);
+    --tw-ring-shadow: 0 0 #0000;
+}
+
+.fi-kpi-dashboard .fi-section-header-heading {
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.fi-kpi-dashboard .fi-section-header-description,
+.fi-kpi-dashboard .kpi-muted {
+    color: var(--mr-muted);
+}
+
+.fi-kpi-dashboard .kpi-track,
+.fi-kpi-dashboard .kpi-head {
+    background: var(--mr-surface-2);
+}
+
+.fi-kpi-dashboard .kpi-fill {
+    background: var(--mr-brand);
+}
+
+.fi-kpi-dashboard .kpi-up {
+    color: var(--kpi-up);
+}
+
+.fi-kpi-dashboard .kpi-down {
+    color: var(--kpi-down);
+}
+
+.fi-kpi-dashboard .kpi-stat + .kpi-stat {
+    border-inline-start: 1px solid var(--mr-line);
+}
+
+@media (max-width: 767px) {
+    .fi-kpi-dashboard .kpi-stat + .kpi-stat {
+        border-inline-start: 0;
+        border-block-start: 1px solid var(--mr-line);
+    }
+}
+
+/* ── Tables ───────────────────────────────────── */
+
+.fi-ta-header-ctn,
+.fi-ta-header-toolbar {
+    background: var(--mr-surface);
+    border-color: var(--mr-line);
+}
+
+.fi-ta-table > thead > tr {
+    background: var(--mr-side);
+}
+
+.fi-ta-header-cell,
+.fi-ta-header-cell .fi-ta-header-cell-sort-btn,
+.fi-ta-table > thead .fi-ta-selection-cell {
+    background: var(--mr-side);
+    color: var(--mr-on-dark);
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.fi-ta-header-cell .fi-icon {
+    color: var(--mr-side-muted);
+}
+
+.fi-ta-row {
+    border-color: var(--mr-line);
+}
+
+.fi-ta-row:hover {
+    background: var(--mr-surface-2);
+}
+
+.fi-ta-empty-state-heading {
+    font-family: var(--mr-font-display);
+}
+
+/* Row icon buttons (phone copy / call). */
+.fi-ta-icon-btn {
+    position: relative;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--mr-radius-s);
+    border: 1px solid var(--mr-line);
+    background: var(--mr-surface);
+    margin-inline-start: 4px;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.fi-ta-icon-btn-success:hover {
+    border-color: color-mix(in oklab, var(--success-600) 45%, var(--mr-line));
+    background: color-mix(in oklab, var(--success-600) 12%, var(--mr-surface));
+}
+
+.fi-ta-icon-btn-neutral:hover {
+    border-color: color-mix(in oklab, var(--mr-brand) 45%, var(--mr-line));
+    background: var(--mr-brand-soft);
+}
+
+/* Filament's copy handler sits on this inner span: cover the whole button. */
+.fi-ta-icon-btn .fi-copyable {
+    position: absolute;
+    inset: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Buttons ──────────────────────────────────── */
+
+.fi-btn {
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+/* Light mode: filled primary buttons are copper with white text, as in miran-system
+   (Filament's contrast check would otherwise pick the lighter 400 shade with dark text).
+   Dark mode keeps Filament's own primary-600 fill with white text. */
+html:not(.dark) .fi-btn.fi-color-primary:not(.fi-outlined):not(label) {
+    background-color: var(--primary-600);
+    color: var(--mr-on-dark);
+}
+
+html:not(.dark) .fi-btn.fi-color-primary:not(.fi-outlined):not(label):hover,
+html:not(.dark) .fi-btn.fi-color-primary:not(.fi-outlined):not(label):focus-visible {
+    background-color: var(--primary-700);
+    color: var(--mr-on-dark);
+}
+
+html:not(.dark) .fi-btn.fi-color-primary:not(.fi-outlined):not(label) .fi-icon,
+html:not(.dark) .fi-btn.fi-color-primary:not(.fi-outlined):not(label) .fi-btn-label {
+    color: inherit;
+}
+
+/* Other coloured buttons keep Filament's own fill and contrast-checked text from the palette. */
+.fi-btn:not(label):not(.fi-color):not(.fi-outlined) {
+    background: var(--mr-surface);
+    border: 1px solid var(--mr-line);
+    --tw-ring-shadow: 0 0 #0000;
+}
+
+.fi-btn:not(label):not(.fi-color):not(.fi-outlined):hover {
+    border-color: var(--mr-muted);
+}
+
+/* ── Inputs ───────────────────────────────────── */
+
+.fi-input-wrp {
+    border-radius: var(--mr-radius-s);
+    background: var(--mr-surface);
+}
+
+.fi-input-wrp:not(.fi-invalid) {
+    --tw-ring-color: var(--mr-line);
+}
+
+.fi-input-wrp:focus-within:not(.fi-disabled):not(.fi-invalid) {
+    --tw-ring-color: var(--mr-brand);
+    box-shadow:
+        var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width, 0px)) var(--mr-brand),
+        0 0 0 4px var(--mr-brand-soft);
+}
+
+.fi-fo-field-label-content {
+    color: var(--mr-muted);
+    font-weight: 500;
+}
+
+.fi-dropdown-panel,
+.fi-select-input .fi-dropdown-panel {
+    background: var(--mr-surface);
+    border: 1px solid var(--mr-line);
+    border-radius: var(--mr-radius-m);
+    box-shadow: var(--mr-shadow-pop);
+}
+
+.fi-dropdown-list-item:hover,
+.fi-select-input-option:hover {
+    background: var(--mr-surface-2);
+}
+
+/* ── Badges ───────────────────────────────────── */
+
+.fi-badge {
+    border-radius: 9999px;
+    font-weight: 500;
+}
+
+.fi-badge:has(> a) {
+    cursor: pointer;
+}
+
+.fi-badge:has(> a):hover {
+    text-decoration: underline;
+}
+
+/* ── Tabs ─────────────────────────────────────── */
+
+.fi-tabs {
+    background: transparent;
+    box-shadow: none;
+    border-block-end: 1px solid var(--mr-line);
+    border-radius: 0;
+    --tw-ring-shadow: 0 0 #0000;
+}
+
+.fi-tabs-item {
+    border-radius: 0;
+    border-block-end: 2px solid transparent;
+    margin-block-end: -1px;
+    color: var(--mr-muted);
+    background: transparent;
+}
+
+.fi-tabs-item.fi-active {
+    background: transparent;
+    border-block-end-color: var(--mr-brand);
+}
+
+.fi-tabs-item.fi-active .fi-tabs-item-label,
+.fi-tabs-item.fi-active .fi-icon {
+    color: var(--mr-brand-ink);
+    font-weight: 700;
+}
+
+/* ── Modals, notifications ────────────────────── */
+
+.fi-modal-window {
+    background: var(--mr-surface);
+    border: 1px solid var(--mr-line);
+    border-radius: var(--mr-radius-l);
+    box-shadow: 0 30px 60px rgb(0 0 0 / 0.25);
+}
+
+.fi-modal-header,
+.fi-modal-footer {
+    border-color: var(--mr-line);
+}
+
+.fi-no-notification {
+    background: var(--mr-surface);
+    border: 1px solid var(--mr-line);
+    border-inline-start: 4px solid var(--mr-brand);
+    border-radius: var(--mr-radius-m);
+    box-shadow: var(--mr-shadow-pop);
+}
+
+.fi-no-notification.fi-color-danger {
+    border-inline-start-color: var(--danger-600);
+}
+
+.fi-no-notification.fi-color-success {
+    border-inline-start-color: var(--success-600);
+}
+
+.fi-no-notification.fi-color-warning {
+    border-inline-start-color: var(--warning-600);
+}
+
+.fi-no-notification-body {
+    white-space: pre-line;
+}
+
+.fi-topbar-database-notifications-btn.fi-icon-btn {
+    position: relative;
+    border: 1px solid var(--mr-line);
+    border-radius: 9999px;
+    background: var(--mr-surface);
+}
+
+.fi-topbar-database-notifications-btn.fi-icon-btn:hover {
+    border-color: var(--mr-brand);
+}
+
+.fi-topbar-database-notifications-btn.fi-icon-btn .fi-badge {
+    position: absolute;
+    top: -4px;
+    inset-inline-start: -4px;
+    min-width: 18px;
+    min-height: 18px;
+    padding: 0 5px;
+    border: 2px solid var(--mr-bg);
+    background: var(--danger-600);
+    color: var(--mr-on-dark);
+    font-size: 0.65rem;
+    line-height: 1;
+}
+
+/* ── Login (AuthUIEnhancer split screen) ──────── */
+
+.custom-auth-wrapper {
+    background: var(--mr-bg);
+}
+
+.custom-auth-empty-panel {
+    background: var(--mr-side);
+    overflow: hidden;
+}
+
+.custom-auth-empty-panel::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: -140px;
+    bottom: -160px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 50% 50%,
+        color-mix(in oklab, var(--primary-500) 55%, transparent),
+        color-mix(in oklab, var(--primary-500) 22%, transparent) 60%,
+        transparent 61%
+    );
+    box-shadow:
+        0 0 0 60px color-mix(in oklab, var(--primary-400) 5%, transparent),
+        0 0 0 120px color-mix(in oklab, var(--primary-400) 3%, transparent);
+    pointer-events: none;
+}
+
+.custom-auth-form-panel {
+    background: var(--mr-bg);
+}
+
+.fi-simple-header-heading {
+    font-weight: 700;
+}
+
+/* ── Scrollbar ────────────────────────────────── */
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: color-mix(in oklab, var(--mr-muted) 45%, transparent);
+    border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fi-body *,
+    .fi-body *::before,
+    .fi-body *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}

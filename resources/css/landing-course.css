@@ -1,0 +1,665 @@
+/*
+ * Course landing pages (pages/landing-excel|kpi|powerbi + sections/landing_course_*).
+ * Loaded after landing-v2.css and only adds what these pages change:
+ * slim licence badges above the heading, a compact form card with an old price
+ * and an installment line, facts under the client logos, tool cards, an extras
+ * strip and the dark "today / after the course" capabilities list.
+ */
+
+/* hero */
+.lv2 .hero-course .trust {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.lv2 .hero-course .badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    border: 1px solid rgba(217, 183, 159, .45);
+    border-radius: 12px;
+    padding: 5px 8px;
+    color: var(--white);
+    line-height: 1.3;
+}
+
+.lv2 .hero-course .badge .lg {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--bronze-light);
+    display: grid;
+    place-items: center;
+    flex: none;
+}
+
+.lv2 .hero-course .badge .lg img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+.lv2 .hero-course .badge div {
+    min-width: 0;
+    flex: 1;
+}
+
+.lv2 .hero-course .badge b {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.lv2 .hero-course .badge span {
+    display: block;
+    margin-top: 1px;
+    font-size: 8.5px;
+    color: var(--bronze-light);
+    white-space: nowrap;
+    letter-spacing: -.2px;
+}
+
+.lv2 .hero-course .hrow {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.lv2 .hero-course .hrow h1 {
+    flex: 1;
+    min-width: 0;
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+.lv2 .hero-course .hrow h1 em {
+    white-space: nowrap;
+}
+
+.lv2 .hero-course .mlogo {
+    height: 55px;
+    width: auto;
+    aspect-ratio: 1429 / 1891;
+    object-fit: contain;
+    flex: none;
+    margin-top: 2px;
+}
+
+/* compact form card */
+.lv2 .hero-course .formcard {
+    padding: 12px 14px 14px;
+    border-radius: 20px;
+}
+
+.lv2 .hero-course .next {
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 12.5px;
+}
+
+.lv2 .hero-course .next .dot {
+    width: 7px;
+    height: 7px;
+    box-shadow: 0 0 0 3px rgba(31, 122, 77, .15);
+}
+
+.lv2 .hero-course .pline {
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.lv2 .hero-course .pline b {
+    font-size: 22px;
+}
+
+.lv2 .hero-course .pline s {
+    color: var(--sub);
+    font-size: 14px;
+    text-decoration-thickness: 2px;
+}
+
+.lv2 .hero-course .pay {
+    text-align: center;
+    font-size: 11.5px;
+    line-height: 1.5;
+    color: var(--sub);
+}
+
+.lv2 .hero-course .pay em {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12.5px;
+    color: var(--ink);
+    white-space: nowrap;
+}
+
+.lv2 .hero-course .pay .tamara {
+    display: inline-block;
+    background: #FFEDE8;
+    color: #C8411F;
+    font-weight: 800;
+    font-size: 11px;
+    border-radius: 8px;
+    padding: 0 7px;
+}
+
+.lv2 .hero-course .formcard h3 {
+    margin-top: 8px;
+    font-size: clamp(13.5px, 3.8vw, 15px);
+    text-align: center;
+}
+
+.lv2 .hero-course label.lbl {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.lv2 .hero-course form {
+    margin-top: 8px;
+}
+
+.lv2 .hero-course .btn {
+    height: 48px;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+/* facts under the client logos */
+.lv2 .course-facts {
+    padding-top: 0;
+}
+
+.lv2 .course-facts .facts {
+    margin-top: 0;
+}
+
+.lv2 .course-facts .fact {
+    background: var(--ink);
+}
+
+.lv2 .course-facts .fact span {
+    white-space: nowrap;
+    font-size: 11.5px;
+    letter-spacing: -.2px;
+}
+
+/* benefits */
+.lv2 .why-course {
+    padding-block: 10px 22px;
+}
+
+.lv2 .kit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.lv2 .kt {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 108px;
+    padding: 14px 12px;
+    border-radius: 16px;
+    background: var(--ink);
+    color: var(--white);
+    text-align: center;
+}
+
+.lv2 .kt::after {
+    content: "";
+    position: absolute;
+    inset: auto -30px -30px auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(217, 183, 159, .16), transparent 70%);
+}
+
+.lv2 .kt img {
+    width: 58px;
+    height: 58px;
+    filter: drop-shadow(0 0 14px rgba(217, 183, 159, .22));
+}
+
+.lv2 .kt b {
+    font-size: 13.5px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.lv2 .kt.wide {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    gap: 12px;
+    min-height: 0;
+}
+
+.lv2 .kt.wide b {
+    text-align: start;
+}
+
+.lv2 .extras {
+    margin-top: 12px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 12px 8px 14px;
+}
+
+.lv2 .extras p {
+    margin: 0 0 8px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--btn);
+}
+
+.lv2 .exg {
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 5), 1fr);
+    gap: 4px;
+}
+
+.lv2 .ex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+}
+
+.lv2 .ex img {
+    width: 44px;
+    height: 44px;
+}
+
+.lv2 .ex span {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--ink);
+}
+
+/* capabilities: dark accordion with a pulsing plus */
+.lv2 .days {
+    position: relative;
+    overflow: hidden;
+    margin-top: 14px;
+    padding: 0 16px;
+    border-radius: 20px;
+    background: var(--ink);
+    color: var(--white);
+}
+
+.lv2 .days::before {
+    content: "";
+    position: absolute;
+    inset: auto -40px -60px auto;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(217, 183, 159, .18), transparent 70%);
+    pointer-events: none;
+}
+
+.lv2 .days summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px 0;
+}
+
+.lv2 .days summary::-webkit-details-marker {
+    display: none;
+}
+
+.lv2 .days summary::after {
+    content: "+";
+    flex: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--bronze-light);
+    color: var(--ink);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.lv2 .days[open] summary::after {
+    content: "−";
+}
+
+.lv2 .days:not([open]) summary::after {
+    animation: lv-course-plus-pulse 1.6s ease-out infinite;
+}
+
+@keyframes lv-course-plus-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(217, 183, 159, .7);
+    }
+
+    60% {
+        transform: scale(1.08);
+        box-shadow: 0 0 0 12px rgba(217, 183, 159, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(217, 183, 159, 0);
+    }
+}
+
+.lv2 .days summary:focus-visible {
+    outline: 3px solid var(--bronze-light);
+    outline-offset: 2px;
+}
+
+.lv2 .days .sq {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.lv2 .days .sq b {
+    font-size: 16.5px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.lv2 .days .sq small {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--on-dark);
+}
+
+.lv2 .story {
+    position: relative;
+    padding: 4px 0 18px;
+}
+
+.lv2 .st {
+    position: relative;
+    padding: 18px 0;
+    border-top: 1px solid rgba(255, 255, 255, .12);
+}
+
+.lv2 .st .num {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: transparent;
+    -webkit-text-stroke: 1.2px var(--bronze-light);
+    opacity: .55;
+}
+
+.lv2 .st h4 {
+    margin: 0;
+    padding-left: 64px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.lv2 .st .simp {
+    margin-top: 4px;
+    padding-left: 64px;
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--on-dark);
+}
+
+.lv2 .ba {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.lv2 .ba .now,
+.lv2 .ba .aft {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    line-height: 1.6;
+}
+
+.lv2 .ba .now {
+    background: rgba(255, 255, 255, .05);
+    border: 1px dashed rgba(255, 255, 255, .22);
+    color: var(--on-dark);
+}
+
+.lv2 .ba .aft {
+    background: rgba(217, 183, 159, .14);
+    border: 1px solid rgba(217, 183, 159, .45);
+    color: var(--white);
+}
+
+.lv2 .ba i {
+    margin-top: 3px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-style: normal;
+    font-size: 11.5px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.lv2 .ba .now i {
+    background: rgba(255, 255, 255, .1);
+    color: var(--on-dark);
+}
+
+.lv2 .ba .aft i {
+    background: var(--bronze-light);
+    color: var(--ink);
+}
+
+.lv2 .ba .arrow {
+    margin: -2px 0;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--bronze-light);
+}
+
+.lv2.lv-course .foot a {
+    text-decoration: underline;
+}
+
+/* Tablet & desktop */
+@media (min-width: 768px) {
+    .lv2 .hero-course .trust {
+        max-width: 640px;
+        gap: 12px;
+    }
+
+    .lv2 .hero-course .badge {
+        padding: 8px 12px;
+    }
+
+    .lv2 .hero-course .badge b {
+        font-size: 12.5px;
+    }
+
+    .lv2 .hero-course .badge span {
+        font-size: 11px;
+    }
+
+    .lv2 .hero-course .hrow h1 {
+        font-size: 38px;
+    }
+
+    .lv2 .hero-course .mlogo {
+        height: 72px;
+    }
+
+    .lv2 .hero-course .formcard {
+        padding: 20px 24px 24px;
+    }
+
+    .lv2 .hero-course .pline b {
+        font-size: 28px;
+    }
+
+    .lv2 .hero-course .pay {
+        font-size: 13px;
+    }
+
+    .lv2 .course-facts {
+        padding-top: 0;
+    }
+
+    .lv2 .course-facts .facts {
+        margin-inline: auto;
+    }
+
+    .lv2 .why-course {
+        padding-block: 32px 48px;
+    }
+
+    .lv2 .kit {
+        grid-template-columns: repeat(var(--kit-cols, 5), 1fr);
+        gap: 14px;
+        margin-top: 24px;
+    }
+
+    .lv2 .kt,
+    .lv2 .kt.wide {
+        grid-column: auto;
+        flex-direction: column;
+        min-height: 170px;
+        padding: 20px 14px;
+    }
+
+    .lv2 .kt.wide b {
+        text-align: center;
+    }
+
+    .lv2 .kt img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .lv2 .kt b {
+        font-size: 15px;
+    }
+
+    .lv2 .extras,
+    .lv2 .days {
+        max-width: 860px;
+        margin-inline: auto;
+    }
+
+    .lv2 .extras {
+        margin-top: 20px;
+        padding: 18px 16px 20px;
+    }
+
+    .lv2 .extras p {
+        font-size: 15px;
+    }
+
+    .lv2 .ex img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .lv2 .ex span {
+        font-size: 13px;
+    }
+
+    .lv2 .days {
+        margin-top: 20px;
+        padding: 0 28px;
+    }
+
+    .lv2 .days .sq b {
+        font-size: 19px;
+    }
+
+    .lv2 .days .sq small {
+        font-size: 14px;
+    }
+
+    .lv2 .st h4 {
+        font-size: 18px;
+    }
+
+    .lv2 .st .simp,
+    .lv2 .ba .now,
+    .lv2 .ba .aft {
+        font-size: 15px;
+    }
+
+    .lv2 .ba {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .lv2 .ba .now,
+    .lv2 .ba .aft {
+        flex: 1;
+    }
+
+    .lv2 .ba .arrow {
+        align-self: center;
+        margin: 0;
+        transform: rotate(90deg);
+    }
+
+    .lv2 .why-course .nv2 {
+        max-width: 860px;
+        margin-inline: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* badges, heading row and lead stack beside the form card */
+    .lv2 .hero-course .formcard {
+        grid-row: 1 / span 3;
+    }
+
+    .lv2 .hero-course .hrow h1 {
+        font-size: 44px;
+    }
+
+    .lv2 .hero-course .hrow,
+    .lv2 .hero-course .lead {
+        max-width: 640px;
+    }
+}

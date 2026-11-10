@@ -1,0 +1,28 @@
+﻿{
+    "mcpServers":  {
+                       "laravel-boost":  {
+                                             "command":  "php",
+                                             "args":  [
+                                                          "artisan",
+                                                          "boost:mcp"
+                                                      ]
+                                         },
+                       "herd":  {
+                                    "command":  "php",
+                                    "args":  [
+                                                 "C:/Users/Hamma/.config/herd/bin/herd-mcp.phar"
+                                             ],
+                                    "env":  {
+                                                "SITE_PATH":  "D:\\mustafa_workspace\\miran-lms"
+                                            }
+                                },
+                       "filesystem":  {
+                                          "command":  "npx",
+                                          "args":  [
+                                                       "-y",
+                                                       "@modelcontextprotocol/server-filesystem",
+                                                       "D:\\mustafa_workspace\\miran-lms"
+                                                   ]
+                                      }
+                   }
+}

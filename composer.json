@@ -1,0 +1,98 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The skeleton application for the Laravel framework.",
+    "keywords": ["laravel", "framework"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "barryvdh/laravel-dompdf": "3.1",
+        "diogogpinto/filament-auth-ui-enhancer": "^2.0",
+        "fakerphp/faker": "^1.24",
+        "filament/filament": "*",
+        "gboquizosanchez/filament-log-viewer": "^2.3",
+        "lab404/laravel-impersonate": "^1.7",
+        "laravel/framework": "^11.31",
+        "laravel/tinker": "^2.9",
+        "league/flysystem-aws-s3-v3": "3.0",
+        "leek/filament-header-filters": "^1.0",
+        "livewire/livewire": "*",
+        "maatwebsite/excel": "4.x-dev",
+        "osamaatef/filament-drilldown-sidebar": "^1.2",
+        "revolution/laravel-google-sheets": "^7.1",
+        "spatie/laravel-permission": "*",
+        "spatie/laravel-translatable": "*",
+        "symfony/css-selector": "^7.0",
+        "symfony/dom-crawler": "^7.0",
+        "wildsea/filament-kanban": "^0.0.2"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.16",
+        "beyondcode/laravel-er-diagram-generator": "^5.0",
+        "laravel/boost": "^1.8",
+        "laravel/pail": "^1.1",
+        "laravel/pint": "^1.13",
+        "laravel/sail": "^1.26",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.1",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^11.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi",
+            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php artisan migrate --graceful --ansi"
+        ],
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        },
+        "patches": {
+            "gboquizosanchez/filament-log-viewer": {
+                "Fix ContextAction::getHidden() missing $record in Filament 4 page context": "patches/gboquizosanchez-filament-log-viewer-context-action-optional-record.patch"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "cweagans/composer-patches": true,
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
